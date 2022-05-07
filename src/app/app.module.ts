@@ -1,16 +1,57 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from "@angular/common/http";
+import { StudioProfileComponent } from './studio_profile/pages/studio-profile/studio-profile.component';
+import { GalleryComponent } from './studio_profile/pages/gallery/gallery.component';
+import { ReviewsComponent } from './studio_profile/pages/reviews/reviews.component';
+import { BookingComponent } from './studio_profile/pages/booking/booking.component';
+import { EquipmentComponent } from './studio_profile/pages/equipment/equipment.component';
+import {MatSliderModule} from "@angular/material/slider";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import { MenuComponent } from './menu/menu.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StudioProfileComponent,
+    GalleryComponent,
+    ReviewsComponent,
+    BookingComponent,
+    EquipmentComponent,
+    MenuComponent,
+    ProfileComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatSliderModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
