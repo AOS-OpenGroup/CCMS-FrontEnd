@@ -27,6 +27,7 @@ import {MatCardModule} from "@angular/material/card";
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookingsComponent } from './artist/pages/bookings/bookings.component';
+import { BookingDetailsComponent } from './artist/pages/booking-details/booking-details.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { BookingsComponent } from './artist/pages/bookings/bookings.component';
     ProfileComponent,
     SignInComponent,
     SignUpComponent,
-    BookingsComponent
+    BookingsComponent,
+    BookingDetailsComponent
   ],
   imports: [
     BrowserModule,

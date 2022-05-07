@@ -10,6 +10,7 @@ import {MenuComponent} from "./menu/menu.component";
 import {SignInComponent} from "./security/pages/sign-in/sign-in.component";
 import {SignUpComponent} from "./security/pages/sign-up/sign-up.component";
 import { BookingsComponent } from './artist/pages/bookings/bookings.component';
+import { BookingDetailsComponent } from './artist/pages/booking-details/booking-details.component';
 
 const routes: Routes = [
   {path: 'studio-profile/booking', component: BookingComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'sign-in' , pathMatch: 'full'},
   {path: 'profile', component: ProfileComponent},
   {path: 'my-bookings', component: BookingsComponent },
+  {path: 'my-bookings/booking-details', component: BookingDetailsComponent },
   {path: 'menu', component: MenuComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'sign-in', component: SignInComponent}
