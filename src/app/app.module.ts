@@ -26,6 +26,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from "@angular/material/card";
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BookingsComponent } from './artist/pages/bookings/bookings.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     ProfileComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    BookingsComponent
   ],
   imports: [
     BrowserModule,
