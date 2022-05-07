@@ -23,6 +23,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from "@angular/material/card";
+import { FooterComponent } from './footer/footer.component';
+import {MatMenuModule} from "@angular/material/menu";
+import { OverviewComponent } from './studio_profile/pages/overview/overview.component';
+import { HomeComponent } from './home/pages/home/home.component';
 
 
 @NgModule({
@@ -36,23 +41,28 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MenuComponent,
     ProfileComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    FooterComponent,
+    OverviewComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatToolbarModule,
-    MatSliderModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatGridListModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatToolbarModule,
+        MatSliderModule,
+        MatIconModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatGridListModule,
+        MatCardModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
