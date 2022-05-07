@@ -7,8 +7,8 @@ import {GalleryComponent} from "./studio_profile/pages/gallery/gallery.component
 import {ReviewsComponent} from "./studio_profile/pages/reviews/reviews.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {MenuComponent} from "./menu/menu.component";
-import {SignInComponent} from "./sign-in/sign-in.component";
-import {SignUpComponent} from "./sign-up/sign-up.component";
+import {SignInComponent} from "./security/pages/sign-in/sign-in.component";
+import {SignUpComponent} from "./security/pages/sign-up/sign-up.component";
 
 const routes: Routes = [
   {path: 'studio-profile/booking', component: BookingComponent},

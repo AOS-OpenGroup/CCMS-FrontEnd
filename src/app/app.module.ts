@@ -20,9 +20,12 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import { MenuComponent } from './menu/menu.component';
 import { ProfileComponent } from './profile/profile.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from "@angular/material/card";
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -51,7 +54,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatListModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
+    MatInputModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
