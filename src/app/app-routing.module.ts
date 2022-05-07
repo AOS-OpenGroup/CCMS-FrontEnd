@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import {BookingAdminComponent} from "./studio_profile-admin/pages/booking-admin/booking-admin.component";
+const routes: Routes = [
+  {path:'BookingAdminComponent', component:BookingAdminComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
