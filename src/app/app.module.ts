@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatMenuModule} from "@angular/material/menu";
 import { OverviewComponent } from './studio_profile/pages/overview/overview.component';
 import { HomeComponent } from './home/pages/home/home.component';
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -46,23 +47,24 @@ import { HomeComponent } from './home/pages/home/home.component';
     OverviewComponent,
     HomeComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatToolbarModule,
-        MatSliderModule,
-        MatIconModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatListModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatGridListModule,
-        MatCardModule,
-        MatMenuModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatSliderModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatInputModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
