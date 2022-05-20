@@ -1,0 +1,63 @@
+.booking-details{
+    border-radius: 10px;
+    background-color: #E1E5E8;
+    padding: 3rem;
+}
+
+img{
+    max-width: 460px;
+    border-radius: 30px;
+}
+
+h1{
+    font-size: 42px;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.heading{
+    margin: 1.5rem 0 1.5rem 1rem;
+}
+
+.bookings-container{
+    display: flex;
+    flex-direction: column;
+    margin:3rem;
+}
+
+.studio-container{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.studio-details{
+    width: clamp(400px, 60%, 500px);
+}
+
+.schedule{
+    text-align: center;
+    width: clamp(300px, 60%, 500px);
+    margin: 10px 0 10px 0;
+}
+
+.schedule p{
+    margin: 20px 0 20px 0;
+}
+
+
+.studio-details button{
+    margin-top:20px;
+    min-width: 230px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap:20px;
+}

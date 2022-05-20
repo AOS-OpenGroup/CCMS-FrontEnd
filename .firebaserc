@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "upc-ccms-si652": {
+      "hosting": {
+        "CCMS-FrontEnd": [
+          "upc-ccms-si652"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "upc-ccms-si652"
+  }
+}

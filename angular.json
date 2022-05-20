@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "CCMS-FrontEnd:build:production",
+            "firebaseProject": "upc-ccms-si652",
+            "firebaseHostingSite": "upc-ccms-si652"
+          }
         }
       }
     }

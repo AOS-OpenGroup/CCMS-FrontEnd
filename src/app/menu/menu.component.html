@@ -4,19 +4,19 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button [routerLink]="'/home'" mat-menu-item>
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>search</mat-icon>
-        <span>Search</span>
+      <button [routerLink]="'/bookings'" mat-menu-item>
+        <mat-icon>calendar_today</mat-icon>
+        <span>Booking</span>
       </button>
-      <button mat-menu-item>
+      <button [routerLink]="'/settings'" mat-menu-item>
         <mat-icon>settings</mat-icon>
         <span>Settings</span>
       </button>
-      <button mat-menu-item>
+      <button [routerLink]="'/'" mat-menu-item>
         <mat-icon>logout</mat-icon>
         <span>Logout</span>
       </button>
