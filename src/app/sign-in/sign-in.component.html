@@ -1,0 +1,46 @@
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile>
+    <img
+      src="https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg"
+      alt=""
+    />
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div  class="form">
+      <div class="form-title">
+        <div class="heading">Login to your Account</div>
+        <div>See what is going on with studios around you</div>
+        <button mat-button><mat-icon aria-hidden="false" aria-label="Example home icon">Google</mat-icon>Continue with Google</button>
+      </div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <section class="checkbox">
+        <input type="checkbox">Remember me
+      </section>
+
+      <button [routerLink]="'/home'"  mat-raised-button>Sign in</button>
+
+      <div class="registration-container">
+        <div>Not registered yet? <span>Create an account</span></div>
+        <div class="link-container">
+          <div><a [routerLink]="'/sign-up'"> Do you need a studio?</a></div>
+          <div><a [routerLink]="'/sign-up-admin'"> Do you have a studio?</a></div>
+        </div>
+      </div>
+
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
