@@ -4,6 +4,13 @@
       "email": "john.doe@gmail.com",
       "password": "$2a$10$IVR5bLl85muR8yjxCcVndOWm1nUAp26UkNJvzRaomRlyg3ydBgrOi",
       "id": 1
+    },
+    {
+      "email": "james@gmail.com",
+      "password": "$2a$10$gZc8GJQELT0BlCnfnhezCe1n8zDi1QIDzhv2HPEAkStZq/LM.sC8W",
+      "name": "james potter",
+      "role": "artist",
+      "id": 2
     }
   ]
 }
