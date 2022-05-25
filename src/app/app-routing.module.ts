@@ -8,7 +8,7 @@ import {ReviewsComponent} from "./studio_profile/pages/reviews/reviews.component
 import {ProfileComponent} from "./profile/profile.component";
 import {MenuComponent} from "./menu/menu.component";
 import {SignInComponent} from "./security/pages/sign-in/sign-in.component";
-import {SignUpComponent} from "./security/pages/sign-up/sign-up.component";
+import {SignUpComponent} from "./security/pages/sign-in/sign-up/sign-up.component";
 import {OverviewComponent} from "./studio_profile/pages/overview/overview.component";
 import {HomeComponent} from "./home/pages/home/home.component";
 import {SignUpAdminComponent} from "./sign-up-admin/sign-up-admin.component";

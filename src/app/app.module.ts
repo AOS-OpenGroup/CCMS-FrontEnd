@@ -21,7 +21,7 @@ import {MatSelectModule} from "@angular/material/select";
 import { MenuComponent } from './menu/menu.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignInComponent } from './security/pages/sign-in/sign-in.component';
-import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
+import { SignUpComponent } from './security/pages/sign-in/sign-up/sign-up.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from "@angular/material/card";
 import { FooterComponent } from './footer/footer.component';
