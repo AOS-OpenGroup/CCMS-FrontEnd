@@ -11,6 +11,13 @@
       "name": "james potter",
       "role": "artist",
       "id": 2
+    },
+    {
+      "email": "harry@gmail.com",
+      "password": "$2a$10$wQxN0h835YpKIgjx6a/3UOYMJ9Lnly6kb/zakqJNw2wKI0QfLJVC2",
+      "name": "harry potter",
+      "role": "artist",
+      "id": 3
     }
   ]
 }
