@@ -9,10 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent {
-
   signUpForm: FormGroup;
-
-
   constructor(public builder: FormBuilder, public authService: AuthService, public router: Router) {
     this.signUpForm = this.builder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -34,5 +31,4 @@ export class SignUpComponent {
       this.router.navigate(['/sign-in']).then();
     })
   }
-
 }

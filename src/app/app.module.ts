@@ -33,7 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
-
+import 'primeflex/primeflex.scss';
 
 @NgModule({
   declarations: [
@@ -55,12 +55,12 @@ import { SettingsComponent } from './settings/settings.component';
     SettingsComponent
   ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatToolbarModule,
-        MatSliderModule,
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      HttpClientModule,
+      MatToolbarModule,
+      MatSliderModule,
         MatIconModule,
         MatButtonModule,
         MatSidenavModule,

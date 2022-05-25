@@ -1,14 +1,15 @@
 
-<mat-grid-list cols="2" rowHeight="1:1">
-  <mat-grid-tile>
-    <img src="https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg">
-  </mat-grid-tile>
-  <mat-grid-tile>
+<div class="grid min-h-screen mr-0">
+  <div class="col-12 md:col-6 p-0">
+    <img class="w-full h-full" src="https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg?auto=compress&cs=tinysrgb&w=1160&h=860&dpr=1">
+  </div>
+  <div class="col-12 md:col-6 p-0 flex flex-column justify-content-center">
+    
+    <h1 class="text-center text-5xl my-7 font-bold">Join us!</h1>
     <form [formGroup]="signUpForm">
-      <div>
-        <mat-grid-list cols="1" rowHeight="100px">
+        <div class="flex flex-column align-items-center justify-content-center">
 
-          <mat-grid-tile>
+          <div>
             <mat-form-field style="width: 100%">
               <mat-label>Email</mat-label>
               <input matInput placeholder="user@domain.com" formControlName="email" required/>
@@ -17,16 +18,16 @@
                 <mat-error *ngIf="email.errors?.['required']">Email is required.</mat-error>
               </div>
             </mat-form-field>
-          </mat-grid-tile>
+          </div>
 
-          <mat-grid-tile>
+          <div>
             <mat-form-field style="width: 100%">
               <mat-label>Full Name</mat-label>
               <input matInput type="text" placeholder="Your name" formControlName="name" required/>
             </mat-form-field>
-          </mat-grid-tile>
+          </div>
 
-          <mat-grid-tile>
+          <div>
             <mat-form-field style="width: 100%">
               <mat-label>Password</mat-label>
               <input matInput type="password" placeholder="Your password" formControlName="password" required/>
@@ -35,9 +36,9 @@
                 <mat-error *ngIf="password.errors?.['required']">Password is required.</mat-error>
               </div>
             </mat-form-field>
-          </mat-grid-tile>
+          </div>
 
-          <mat-grid-tile>
+          <div>
             <mat-form-field appearance="fill">
               <mat-label>Select</mat-label>
               <mat-select formControlName="role">
@@ -45,17 +46,23 @@
                 <mat-option value="studio">Studio</mat-option>
               </mat-select>
             </mat-form-field>
-          </mat-grid-tile>
+          </div>
+        </div>
+        <div class="flex flex-column align-items-center justify-content-center my-3">
 
+          <mat-card-actions align="end">
+            <button mat-button class="material-button" (click)="signUp()">Sign up</button>
+          </mat-card-actions>
 
-        </mat-grid-list>
-      </div>
-      <mat-card-actions align="end">
-        <button mat-button class="material-button" (click)="signUp()">Sign-In</button>
-      </mat-card-actions>
+          <div class="my-3">
+            <span>Already have an account? </span>
+            <a href="/sign-up" class="font-semibold">Sign in!</a>
+          </div>
+        </div>
+
     </form>
-  </mat-grid-tile>
+  </div>
 
-</mat-grid-list>
+</div>
 
 
