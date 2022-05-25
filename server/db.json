@@ -1,3 +1,9 @@
 {
-
+  "users": [
+    {
+      "email": "john.doe@gmail.com",
+      "password": "$2a$10$IVR5bLl85muR8yjxCcVndOWm1nUAp26UkNJvzRaomRlyg3ydBgrOi",
+      "id": 1
+    }
+  ]
 }
