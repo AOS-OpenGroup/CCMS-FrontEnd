@@ -33,6 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
+import { StudiosComponent } from './artists/pages/studios/studios.component';
+
+
 
 
 @NgModule({
@@ -52,7 +55,9 @@ import { SettingsComponent } from './settings/settings.component';
     HomeComponent,
     BookingsComponent,
     SignUpAdminComponent,
-    SettingsComponent
+    SettingsComponent,
+    StudiosComponent,
+
   ],
     imports: [
         BrowserModule,
