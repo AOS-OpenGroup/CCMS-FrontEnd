@@ -3,4 +3,5 @@ export interface Studio {
   title: string;
   description: string;
   distance: string;
+  img:string;
 }
