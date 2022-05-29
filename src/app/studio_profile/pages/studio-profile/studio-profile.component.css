@@ -20,7 +20,11 @@ img{
 
 }
 /* Container holding the image and the text */
+.container1{
+  padding-top: 3rem;
+}
 .container {
+
   position: relative;
   top: 0;
   z-index: 1;
