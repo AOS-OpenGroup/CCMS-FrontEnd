@@ -1,0 +1,23 @@
+*{
+background-color: darkgray;
+}
+h1{
+  font-size: 48px;
+  font-family: Roboto ;
+}
+.body1{
+  margin: 10px;
+  flex-direction: column;
+  position: relative;
+}
+.div2{
+  left: 30%;
+  width: 60%;
+  position: relative;
+  padding-bottom: 5em;
+  min-height:100vh;
+}
+img{
+  width: 100%;
+}
+
