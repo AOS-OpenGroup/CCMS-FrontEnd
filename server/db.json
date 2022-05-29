@@ -1,4 +1,30 @@
 {
+
+  "studios": [
+    {
+      "id": 1,
+      "title": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "distance": "2km away",
+      "img": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "distance": "2km away",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaW8Nyo9cfD39Ex2tgBGTL9eEqz2eHs-zGcw&usqp=CAU"
+    },
+    {
+      "id": 3,
+      "title": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "distance": "2km away",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndw_Pxs1fvrSTJG2F7YYxLyYAz4Z_aJK5ew&usqp=CAU"
+    }
+  ]
+}
+
   "users": [
     {
       "email": "john.doe@gmail.com",
@@ -22,3 +48,4 @@
   ],
   "reviews": []
 }
+

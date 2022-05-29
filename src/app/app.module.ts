@@ -29,10 +29,17 @@ import {MatMenuModule} from "@angular/material/menu";
 import { OverviewComponent } from './studio_profile/pages/overview/overview.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
+import { StudiosComponent } from './artists/pages/studios/studios.component';
+
+
+
+import { MainComponent } from './artist/main/main.component';
+
+
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
@@ -40,6 +47,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {FormsModule} from "@angular/forms";
 import 'primeflex/primeflex.scss';
 import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -59,6 +67,8 @@ import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-
     BookingsComponent,
     SignUpAdminComponent,
     SettingsComponent,
+    StudiosComponent,
+    MainComponent,
     BookingsStudioProfileComponent
   ],
     imports: [
@@ -82,10 +92,11 @@ import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-
         MatGridListModule,
         MatCardModule,
         MatMenuModule,
-      MatGridListModule,
-      MatCardModule,
-      MatInputModule,
-      ReactiveFormsModule
+        MatGridListModule,
+        MatCardModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
