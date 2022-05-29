@@ -20,8 +20,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import { MenuComponent } from './menu/menu.component';
 import { ProfileComponent } from './profile/profile.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from "@angular/material/card";
 import { FooterComponent } from './footer/footer.component';
@@ -33,7 +33,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
+
 import { MainComponent } from './artist/main/main.component';
+
+
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {FormsModule} from "@angular/forms";
+import 'primeflex/primeflex.scss';
+import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
 
 
 @NgModule({
@@ -54,9 +64,18 @@ import { MainComponent } from './artist/main/main.component';
     BookingsComponent,
     SignUpAdminComponent,
     SettingsComponent,
-    MainComponent
+
+    MainComponent,
+
+    BookingsStudioProfileComponent
+
   ],
     imports: [
+        MatProgressSpinnerModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatSortModule,
+        FormsModule,
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
