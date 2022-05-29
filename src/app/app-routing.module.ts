@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: 'sign-up', component: SignUpComponent},
   {path: 'sign-in', component: SignInComponent},
   {path: 'studio-profile/overview', component: OverviewComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: MainComponent},
   {path: 'sign-up-admin', component: SignUpAdminComponent},
   {path: 'booking', component: BookingComponent},
   {path: 'bookings', component: BookingsComponent},
@@ -41,7 +41,7 @@ const routes: Routes = [
 
   {path: 'studios/near-you', component: StudiosComponent},
 
-  {path: 'artist/main', component: MainComponent}
+  
 
 
 ];
