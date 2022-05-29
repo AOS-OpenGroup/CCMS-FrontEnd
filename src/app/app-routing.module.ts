@@ -14,9 +14,10 @@ import {HomeComponent} from "./home/pages/home/home.component";
 import {SignUpAdminComponent} from "./sign-up-admin/sign-up-admin.component";
 import {BookingsComponent} from "./bookings/pages/bookings/bookings.component";
 import {SettingsComponent} from "./settings/settings.component";
+import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
 
 const routes: Routes = [
-  {path: 'studio-profile/bookings', component: BookingComponent},
+  {path: 'studio-profile/bookings', component: BookingsStudioProfileComponent},
   {path: 'studio-profile/equipment', component: EquipmentComponent},
   {path: 'studio-profile/gallery', component: GalleryComponent},
   {path: 'studio-profile/reviews', component: ReviewsComponent},
