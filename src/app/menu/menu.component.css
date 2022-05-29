@@ -1,3 +1,7 @@
+sidenav-container {
+
+}
+
 .example-spacer {
   flex: 1 1 auto;
 
@@ -5,6 +9,7 @@
 .mat-toolbar
 {
   background: #438EBA;
+
 }
 .logo
 {
@@ -13,5 +18,10 @@
 .button-profile{
   background: #40AAE8;
 }
+.navbar{
+  position: sticky;
+  top:0px;
+  z-index: 2500;
+  width: 100%;
 
-
+}
