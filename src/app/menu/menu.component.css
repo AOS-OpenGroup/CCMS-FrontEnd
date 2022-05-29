@@ -1,3 +1,17 @@
 .example-spacer {
   flex: 1 1 auto;
+
 }
+.mat-toolbar
+{
+  background: #438EBA;
+}
+.logo
+{
+  color: black;
+}
+.button-profile{
+  background: #40AAE8;
+}
+
+

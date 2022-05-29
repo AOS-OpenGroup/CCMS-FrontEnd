@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-toolbar color="primary">
+  <mat-toolbar color= "primary">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
     </button>
@@ -21,9 +21,12 @@
         <span>Logout</span>
       </button>
     </mat-menu>
-    <span>CCMS</span>
+    <span class ="logo">CCMS </span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="'/profile'">
+    <button mat-raised-button class ="button-profile"  [routerLink]="'/profile'">My Profile
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" >
+      </button>
+
       <mat-icon>account_circle</mat-icon>
     </button>
   </mat-toolbar>
