@@ -55,12 +55,12 @@ import 'primeflex/primeflex.scss';
     SettingsComponent
   ],
     imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      HttpClientModule,
-      MatToolbarModule,
-      MatSliderModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatToolbarModule,
+        MatSliderModule,
         MatIconModule,
         MatButtonModule,
         MatSidenavModule,
