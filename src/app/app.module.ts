@@ -33,6 +33,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
+import { StudiosComponent } from './artists/pages/studios/studios.component';
+
+
 
 import { MainComponent } from './artist/main/main.component';
 
@@ -64,11 +67,9 @@ import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-
     BookingsComponent,
     SignUpAdminComponent,
     SettingsComponent,
-
+    StudiosComponent,
     MainComponent,
-
     BookingsStudioProfileComponent
-
   ],
     imports: [
         MatProgressSpinnerModule,

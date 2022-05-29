@@ -1,0 +1,16 @@
+.box{
+  max-width: 1200px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-content: center ;
+
+}
+
+.card1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}

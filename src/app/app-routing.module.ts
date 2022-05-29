@@ -14,6 +14,7 @@ import {HomeComponent} from "./home/pages/home/home.component";
 import {SignUpAdminComponent} from "./sign-up-admin/sign-up-admin.component";
 import {BookingsComponent} from "./bookings/pages/bookings/bookings.component";
 import {SettingsComponent} from "./settings/settings.component";
+import {StudiosComponent} from "./artists/pages/studios/studios.component";
 
 import {MainComponent} from "./artist/main/main.component";
 
@@ -37,6 +38,9 @@ const routes: Routes = [
   {path: 'booking', component: BookingComponent},
   {path: 'bookings', component: BookingsComponent},
   {path: 'settings', component: SettingsComponent},
+
+  {path: 'studios/near-you', component: StudiosComponent},
+
   {path: 'artist/main', component: MainComponent}
 
 
