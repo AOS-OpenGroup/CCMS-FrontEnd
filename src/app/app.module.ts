@@ -29,10 +29,11 @@ import {MatMenuModule} from "@angular/material/menu";
 import { OverviewComponent } from './studio_profile/pages/overview/overview.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
+import { MainComponent } from './artist/main/main.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { SettingsComponent } from './settings/settings.component';
     HomeComponent,
     BookingsComponent,
     SignUpAdminComponent,
-    SettingsComponent
+    SettingsComponent,
+    MainComponent
   ],
     imports: [
         BrowserModule,
@@ -70,10 +72,11 @@ import { SettingsComponent } from './settings/settings.component';
         MatGridListModule,
         MatCardModule,
         MatMenuModule,
-      MatGridListModule,
-      MatCardModule,
-      MatInputModule,
-      ReactiveFormsModule
+        MatGridListModule,
+        MatCardModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
