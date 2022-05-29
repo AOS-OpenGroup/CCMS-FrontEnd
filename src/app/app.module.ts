@@ -33,6 +33,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {FormsModule} from "@angular/forms";
 import 'primeflex/primeflex.scss';
 
 @NgModule({
@@ -55,6 +60,11 @@ import 'primeflex/primeflex.scss';
     SettingsComponent
   ],
     imports: [
+        MatProgressSpinnerModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatSortModule,
+        FormsModule,
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
