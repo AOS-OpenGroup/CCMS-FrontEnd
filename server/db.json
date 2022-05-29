@@ -1,3 +1,22 @@
 {
-
+  "studios": [
+    {
+      "id": 1,
+      "title": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "distance": "2km away"
+    },
+    {
+      "id": 2,
+      "title": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "distance": "2km away"
+    },
+    {
+      "id": 3,
+      "title": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "distance": "2km away"
+    }
+  ]
 }
