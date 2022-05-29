@@ -20,8 +20,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import { MenuComponent } from './menu/menu.component';
 import { ProfileComponent } from './profile/profile.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './security/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './security/pages/sign-up/sign-up.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from "@angular/material/card";
 import { FooterComponent } from './footer/footer.component';
@@ -29,13 +29,24 @@ import {MatMenuModule} from "@angular/material/menu";
 import { OverviewComponent } from './studio_profile/pages/overview/overview.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BookingsComponent } from './bookings/pages/bookings/bookings.component';
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StudiosComponent } from './artists/pages/studios/studios.component';
 
 
+
+import { MainComponent } from './artist/main/main.component';
+
+
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {FormsModule} from "@angular/forms";
+import 'primeflex/primeflex.scss';
+import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
 
 
 @NgModule({
@@ -57,9 +68,15 @@ import { StudiosComponent } from './artists/pages/studios/studios.component';
     SignUpAdminComponent,
     SettingsComponent,
     StudiosComponent,
-
+    MainComponent,
+    BookingsStudioProfileComponent
   ],
     imports: [
+        MatProgressSpinnerModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatSortModule,
+        FormsModule,
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -75,10 +92,11 @@ import { StudiosComponent } from './artists/pages/studios/studios.component';
         MatGridListModule,
         MatCardModule,
         MatMenuModule,
-      MatGridListModule,
-      MatCardModule,
-      MatInputModule,
-      ReactiveFormsModule
+        MatGridListModule,
+        MatCardModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
