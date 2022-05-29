@@ -1,21 +1,40 @@
+<app-menu></app-menu>
 
-<a mat-button [routerLink]="'/studio-profile/overview'">Overview</a>
-<a mat-button [routerLink]="'/studio-profile/gallery'">Gallery</a>
-<a mat-button [routerLink]="'/studio-profile/reviews'">Reviews</a>
-<a mat-button [routerLink]="'/studio-profile/bookings'">Bookings</a>
-<a mat-button [routerLink]="'/studio-profile/equipment'">Equipment</a>
+
 <mat-divider [vertical]="true" [inset]="true"></mat-divider>
-<mat-card class="example-card">
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-</mat-card>
+  <div class="container">
+    <img mat-card-image src="https://blog.laminasyaceros.com/hubfs/IMG_5903.jpg" alt="Photo of a Shiba Inu">
+    <div class="top-right">
+      <h1 class="titleStudio">Studio 214 -UPC</h1>
+      <p class="description">
+        descirpcion del estudio snajsnsajsn jsajasbs jassajns j ansj ajas najn jasn jasnjASN JASN JAN S  SNAJSNJAS N SAJN JSAN NASJN SJANN AJSNJ ASNAJ NJSN
+
+      </p>
+      <p class ="address">
+        address
+      </p>
+    </div>
+  </div>
+<div>
+  <mat-toolbar class="menubar">
+    <mat-toolbar-row>
+      <a mat-button [routerLink]="'/studio-profile/overview'">Overview</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <a mat-button [routerLink]="'/studio-profile/gallery'">Gallery</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <a mat-button [routerLink]="'/studio-profile/reviews'">Reviews</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <a mat-button [routerLink]="'/studio-profile/bookings'">Bookings</a>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <a mat-button [routerLink]="'/studio-profile/equipment'">Equipment</a>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+</div>
+
 <ng-content></ng-content>
 

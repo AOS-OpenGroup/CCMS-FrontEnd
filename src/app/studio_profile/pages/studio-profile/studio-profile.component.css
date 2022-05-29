@@ -10,13 +10,57 @@
   background: inherit;
 }
 img{
-  height: 20vh;
+  width: 100%;
+  height: 30vh;
   object-fit: cover;
   object-position: center;
 }
 
 .mat-toolbar.mat-primary {
-  position: sticky;
+
+}
+/* Container holding the image and the text */
+.container {
+  position: relative;
   top: 0;
   z-index: 1;
+}
+
+
+
+
+
+
+/* Top right text */
+.top-right {
+  width: 30%;
+  position: absolute;
+  top: 50px;
+  right: 16px;
+  color: white;
+  font-family:Roboto;
+
+}
+.titleStudio{
+
+}
+.description{
+
+}
+.address{
+  font-size: small;
+
+}
+.menubar{
+  width: 20%;
+  position: absolute;
+  background: #438EBA;
+  border-radius: 25px;
+  left: 50px;
+  color: white;
+
+}
+a{
+  font-size: x-large;
+  width: 100%;
 }
