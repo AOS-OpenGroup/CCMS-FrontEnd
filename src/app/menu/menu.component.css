@@ -18,8 +18,8 @@ sidenav-container {
 .button-profile{
   background: #40AAE8;
 }
-.navbar{
-  position: sticky;
+header{
+  position: fixed;
   top:0px;
   z-index: 2500;
   width: 100%;
