@@ -1,15 +1,14 @@
+*{
+  background-color: darkgray;
+}
 h1{
   font-size: xxx-large;
 }
-body1{
+.body1{
   margin: 10px;
 
   flex-direction: column;
-  position: relative;
-
-
-
-
+  position: absolute;
 }
 .div2{
   left: 30%;
@@ -17,14 +16,11 @@ body1{
   position: relative;
   padding-bottom: 5em;
   min-height:100vh;
-
 }
 
 img{
   width: 100%;
-
 }
-
 p{
   padding: 1em;
   margin:0px;
