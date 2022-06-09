@@ -34,18 +34,16 @@ import { BookingsComponent } from './bookings/pages/bookings/bookings.component'
 import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StudiosComponent } from './artists/pages/studios/studios.component';
-
-
-
 import { MainComponent } from './artist/main/main.component';
-
-
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import 'primeflex/primeflex.scss';
 import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
+import {UpcomingComponent} from "./studio-profile-admin/pages/home/home.component";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { BookingListComponent } from './studio-profile-admin/pages/booking-list/booking-list.component';
 
 
 @NgModule({
@@ -68,35 +66,37 @@ import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-
     SettingsComponent,
     StudiosComponent,
     MainComponent,
-    BookingsStudioProfileComponent
+    BookingsStudioProfileComponent,
+    UpcomingComponent,
+    BookingListComponent ],
+  imports: [
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatSliderModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatCardModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonToggleModule
   ],
-    imports: [
-        MatProgressSpinnerModule,
-        MatPaginatorModule,
-        MatTableModule,
-        MatSortModule,
-        FormsModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        MatToolbarModule,
-        MatSliderModule,
-        MatIconModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatListModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatGridListModule,
-        MatCardModule,
-        MatMenuModule,
-        MatGridListModule,
-        MatCardModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        FormsModule
-    ],
   providers: [],
   bootstrap: [AppComponent]
 })

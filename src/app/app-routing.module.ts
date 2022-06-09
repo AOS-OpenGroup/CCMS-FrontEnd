@@ -15,11 +15,10 @@ import {SignUpAdminComponent} from "./sign-up-admin/sign-up-admin.component";
 import {BookingsComponent} from "./bookings/pages/bookings/bookings.component";
 import {SettingsComponent} from "./settings/settings.component";
 import {StudiosComponent} from "./artists/pages/studios/studios.component";
-
 import {MainComponent} from "./artist/main/main.component";
-
-import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
-
+import {BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
+import {UpcomingComponent } from './studio-profile-admin/pages/home/home.component';
+import{BookingListComponent} from "./studio-profile-admin/pages/booking-list/booking-list.component";
 
 const routes: Routes = [
   {path: 'studio-profile/bookings', component: BookingsStudioProfileComponent},
@@ -27,7 +26,7 @@ const routes: Routes = [
   {path: 'studio-profile/gallery', component: GalleryComponent},
   {path: 'studio-profile/reviews', component: ReviewsComponent},
   {path: 'studio-profile', component: StudioProfileComponent},
-  {path: '', redirectTo: 'sign-in' , pathMatch: 'full'},
+  {path: '', redirectTo: 'sign-up' , pathMatch: 'full'},
   {path: 'profile', component: ProfileComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'sign-up', component: SignUpComponent},
@@ -38,11 +37,10 @@ const routes: Routes = [
   {path: 'booking', component: BookingComponent},
   {path: 'bookings', component: BookingsComponent},
   {path: 'settings', component: SettingsComponent},
-
   {path: 'studios/near-you', component: StudiosComponent},
-
-  
-
+  {path:'admin/upcoming', component: UpcomingComponent},
+  {path:'homeComponent',component: HomeComponent} ,
+  {path: 'Booking-List',component:BookingListComponent}
 
 ];
 
