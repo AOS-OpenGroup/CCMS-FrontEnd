@@ -1,0 +1,10 @@
+#divCustomer{
+}
+table {
+  width: 80%;
+  margin: auto;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
