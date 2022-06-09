@@ -21,7 +21,6 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
-    "lodash": "^4.17.21",
     "angular-pipes": "^10.0.0",
     "lodash": "^4.17.21",
     "primeflex": "^3.2.0",
