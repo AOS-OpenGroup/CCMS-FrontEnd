@@ -46,6 +46,68 @@
       "id": 3
     }
   ],
-  "reviews": []
+  "reviews": [],
+  "upcoming": [
+    {
+      "id": 1,
+      "customer": "james potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 0
+    },
+    {
+      "id": 2,
+      "customer": "luca potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 1
+    },
+    {
+      "id": 3,
+      "customer": "maria potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 0
+    },
+    {
+      "id": 4,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 1
+
+
+    }
+  ],
+  "Booking":[
+    {
+      "id": 1,
+      "customer": "james potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": true
+    },
+    {
+      "id": 2,
+      "customer": "luca potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": false
+    },
+    {
+      "id": 3,
+      "customer": "maria potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": false
+    },
+    {
+      "id": 4,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": false
+    }
+]
 }
 
