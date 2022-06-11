@@ -6,3 +6,4 @@
   "/sign-up": "/signup",
   "/studios/:studiosId/title": "/competences?studiosId=:studiosId&_expand=title"
 }
+

@@ -1,5 +1,4 @@
 {
-
   "studios": [
     {
       "id": 1,
@@ -23,8 +22,6 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndw_Pxs1fvrSTJG2F7YYxLyYAz4Z_aJK5ew&usqp=CAU"
     }
   ],
-
-
   "users": [
     {
       "email": "john.doe@gmail.com",
@@ -46,7 +43,20 @@
       "id": 3
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "username": "delamarzp",
+      "date": "sassas",
+      "message": "sasasass",
+      "id": 1
+    },
+    {
+      "username": "marcos",
+      "date": "7 de jun ,2022",
+      "message": "falla en el motor",
+      "id": 2
+    }
+  ],
   "upcoming": [
     {
       "id": 1,
@@ -75,39 +85,246 @@
       "date": "Jun 7, 2022",
       "time": "09:00",
       "status": 1
-
-
     }
   ],
-  "Booking":[
+  "Booking": [
     {
       "id": 1,
+      "studioId": 1,
       "customer": "james potter",
       "date": "Jun 7, 2022",
       "time": "09:00",
-      "status": true
+      "status": "true"
     },
     {
       "id": 2,
+      "studioId": 1,
       "customer": "luca potter",
       "date": "Jun 7, 2022",
       "time": "09:00",
-      "status": false
+      "status": "false"
     },
     {
       "id": 3,
+      "studioId": 1,
       "customer": "maria potter",
       "date": "Jun 7, 2022",
       "time": "09:00",
-      "status": false
+      "status": "false"
     },
     {
       "id": 4,
+      "studioId": 1,
       "customer": "losa potter",
       "date": "Jun 7, 2022",
       "time": "09:00",
-      "status": false
+      "status": "false"
+    },
+    {
+      "id": 5,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 6,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 7,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 8,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 9,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 10,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 11,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 12,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 13,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 14,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },{
+      "id": 15,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },{
+      "id": 16,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 17,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 18,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 19,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 20,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 21,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 22,
+      "studioId": 1,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 23,
+      "studioId": 2,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 24,
+      "studioId": 2,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 25,
+      "studioId": 2,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 26,
+      "studioId": 2,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 27,
+      "studioId": 2,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "false"
+    },
+    {
+      "id": 28,
+      "studioId": 3,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 29,
+      "studioId": 3,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
+    },
+    {
+      "id": 30,
+      "studioId": 3,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": "true"
     }
-]
+  ]
 }
-
