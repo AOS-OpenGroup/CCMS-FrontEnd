@@ -199,14 +199,16 @@
       "date": "Jun 7, 2022",
       "time": "09:00",
       "status": "false"
-    },{
+    },
+    {
       "id": 15,
       "studioId": 1,
       "customer": "losa potter",
       "date": "Jun 7, 2022",
       "time": "09:00",
       "status": "false"
-    },{
+    },
+    {
       "id": 16,
       "studioId": 1,
       "customer": "losa potter",
@@ -325,6 +327,24 @@
       "date": "Jun 7, 2022",
       "time": "09:00",
       "status": "true"
+    },
+    {
+      "customer": "sas",
+      "date": "sas",
+      "time": "asasas",
+      "id": 31
+    },
+    {
+      "date": "a",
+      "customer": "ssas",
+      "time": "s",
+      "id": 32
+    },
+    {
+      "customer": "sas",
+      "date": "sas",
+      "time": "aasasasas",
+      "id": 33
     }
   ]
 }
