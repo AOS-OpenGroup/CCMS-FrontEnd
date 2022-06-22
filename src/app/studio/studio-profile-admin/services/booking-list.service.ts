@@ -1,5 +1,5 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
-import {BookingListModel} from "../model/booking-list.model";
+import {Booking} from "../model/booking";
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
 
@@ -7,7 +7,7 @@ import { catchError, Observable, retry, throwError } from "rxjs";
   providedIn: 'root'
 })
 export class BookingListService {
-  basePath='http://localhost:4200/api/v1/upcoming';
+  basePath='http://localhost:3000/api/v1/Booking';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -28,31 +28,31 @@ export class BookingListService {
   }
 
   // Create Booking-list
-  create(item: any): Observable<BookingListModel> {
-    return this.http.post<BookingListModel>(this.basePath, JSON.stringify(item), this.httpOptions)
+  create(item: any): Observable<Booking> {
+    return this.http.post<Booking>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
   // Get Review by id
-  getById(id: any): Observable<BookingListModel> {
-    return this.http.get<BookingListModel>(`${this.basePath}/${id}`, this.httpOptions)
+  getById(id: any): Observable<Booking> {
+    return this.http.get<Booking>(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
   // Get all Reviews
-  getAll(): Observable<BookingListModel> {
-    return this.http.get<BookingListModel>(this.basePath, this.httpOptions)
+  getAll(): Observable<Booking> {
+    return this.http.get<Booking>(this.basePath, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
-  update(id: any, item: any): Observable<BookingListModel> {
-    return this.http.put<BookingListModel>(`${this.basePath}/${id}`, JSON.stringify(item),this.httpOptions)
+  update(id: any, item: any): Observable<Booking> {
+    return this.http.put<Booking>(`${this.basePath}/${id}`, JSON.stringify(item),this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -60,8 +60,8 @@ export class BookingListService {
   }
 
   // Delete Review
-  delete(id: any): Observable<BookingListModel> {
-    return this.http.delete<BookingListModel>(`${this.basePath}/${id}`, this.httpOptions)
+  delete(id: any): Observable<Booking> {
+    return this.http.delete<Booking>(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)

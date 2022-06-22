@@ -4,7 +4,7 @@
 <div class="example-container mat-elevation-z8">
 <div id = "divCustomer" class="card">
   <h1 align="center">AllBooking</h1>
-  <table mat-table [dataSource]="upcomingData" class="mat-elevation-z8 demo-table">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
     <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
       <th mat-header-cell *matHeaderCellDef>
         {{column.header}}
@@ -13,14 +13,15 @@
         {{column.cell(row)}}
       </td>
     </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
+    <mat-paginator [pageSizeOptions]="[5]" aria-label="Select page of users"></mat-paginator>
   </table>
+
 </div>
-  <mat-paginator [length]="10" [pageSize]="10" aria-label="Select page of GitHub search results"></mat-paginator>
+
 </div>
 
 
 <p>booking-list works!</p>
+

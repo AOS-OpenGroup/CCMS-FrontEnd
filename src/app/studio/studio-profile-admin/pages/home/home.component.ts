@@ -1,67 +1,27 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
-import {Upcoming} from "../../model/upcoming";
-import {UpcomingService} from "../../services/upcoming.service";
+import {Booking} from "../../model/booking";
+import {BookingListService} from "../../services/booking-list.service";
 import {NgForm} from "@angular/forms";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
+
+
 import * as _ from "lodash";
-import {Review} from "../../../studio_profile/model/review";
-const ELEMENT_DATA:Upcoming[]=[
-  {id: 1, customer: 'Mateo lewis', date: '7 jun ,2022', time: '18:00',status:true},
-  {id: 2, customer: ' helion rofue', date: '7 jun ,2022', time: '18:00',status:true},
-  {id: 3, customer: 'Lithium bardo', date: '7 jun ,2022', time: '18:00',status:false},
-  {id: 4, customer: 'Beryllium Vasques', date: '7 jun ,2022', time: '18:00',status:true},
-  {id: 5, customer: 'Boron Rojo', date: '7 jun ,2022', time: '18:00',status:true},
-  {id: 6, customer: 'Carbon Shen', date: '7 jun ,2022', time: '18:00',status:false},
-  {id: 7, customer: 'Nitrogen Clos', date: '7 jun ,2022', time: '18:00',status:false},
-  {id: 8, customer: 'Oxygen Pard', date: '7 jun ,2022', time: '18:00',status:true},
-  {id: 9, customer: 'Fluorine Parck', date: '7 jun ,2022', time: '18:00',status:false},
-  {id: 10, customer: 'Neon Shyny', date: '7 jun ,2022', time: '18:00',status:true}
-];
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class UpcomingComponent  {
-  //displayedColumns: string[] = ['id', 'customer', 'date', 'time', 'status'];
-  columns = [
+export class UpcomingComponent implements OnInit {
+  dataSource: MatTableDataSource<any>;
+  bookingData: Booking;
+  displayedColumns: string[] = ['id', 'customerId', 'name', 'date', 'time', 'status']
 
-    {
-      columnDef: 'Id',
-      header: 'No.',
-      cell: (element: Upcoming) => `${element.id}`,
-    },
-    {
-      columnDef: 'customer',
-      header: 'Customer',
-      cell: (element: Upcoming) => `${element.customer}`,
-    },
-    {
-      columnDef: 'date',
-      header: 'Date',
-      cell: (element: Upcoming) => `${element.date}`,
-    },
-    {
-      columnDef: 'time',
-      header: 'Time',
-      cell: (element: Upcoming) => `${element.time}`,
-    },
-    {
-      columnDef: 'status',
-      header: 'Status',
-      cell: (element: Upcoming) => `${element.status}`,
-    }
-  ];
-  upcomingData = ELEMENT_DATA;
-  displayedColumns = this.columns.map(c => c.columnDef);
-}
-
-/*
-
-  @ViewChild('upcomingForm', {static: false})
-  upcomingForm!: NgForm;
+  @ViewChild('studentForm', {static: false})
+  guardianForm!: NgForm;
 
   @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator;
@@ -71,13 +31,13 @@ export class UpcomingComponent  {
 
   isEditMode = false;
 
-  constructor(private upcomingService: UpcomingService) {
-    this.upcomingData[10] = {} as Upcoming;
+  constructor(private guardiansService: BookingListService) {
+    this.bookingData = {} as Booking;
     this.dataSource = new MatTableDataSource<any>();
   }
 
   ngOnInit(): void {
-    this.getAllUpComing();
+    this.getAllGuardians();
   }
 
   ngAfterViewInit(): void {
@@ -85,48 +45,47 @@ export class UpcomingComponent  {
     this.dataSource.sort = this.sort;
   }
 
-  getAllUpComing() {
-    this.upcomingService.getAll().subscribe((response: any) => {
+  getAllGuardians() {
+    this.guardiansService.getAll().subscribe((response: any) => {
       this.dataSource.data = response;
     });
   }
-  editItem(element: Upcoming) {
-    this.upcomingData[10] = _.cloneDeep(element);
+  selectGuardian(element: Booking){
+    //console.log(element);
+    this.guardiansService.SetCurrent.emit({
+      data:element
+    })
+  }
+  editItem(element: Booking) {
+    this.bookingData = _.cloneDeep(element);
     this.isEditMode = true;
   }
 
   cancelEdit() {
     this.isEditMode = false;
-    this.upcomingForm.resetForm();
+    this.guardianForm.resetForm();
   }
 
   deleteItem(id: number) {
-    this.upcomingService.delete(id).subscribe(() => {
-      this.dataSource.data = this.dataSource.data.filter((o: Upcoming) => {
+    this.guardiansService.delete(id).subscribe(() => {
+      this.dataSource.data = this.dataSource.data.filter((o: Booking) => {
         return o.id !== id ? o : false;
       });
     });
-
     console.log(this.dataSource.data);
   }
-  selectUpcoming(element: Review){
-    //console.log(element);
-    this.upcomingService.SetCurrent.emit({
-      data:element
-    })
-  }
 
-  addUpcoming() {
-    this.upcomingData[10].id = 0;
-    this.upcomingService.create(this.upcomingData).subscribe((response: any) => {
+  addGuardian() {
+    this.bookingData.id = 0;
+    this.guardiansService.create(this.bookingData).subscribe((response: any) => {
       this.dataSource.data.push({...response});
       this.dataSource.data = this.dataSource.data.map((o: any) => { return o; });
     });
   }
 
-  updateUpcoming() {
-    this.upcomingService.update(this.upcomingData[10].id, this.upcomingData).subscribe((response: any) => {
-      this.dataSource.data = this.dataSource.data.map((o: Upcoming) => {
+  updateGuardian() {
+    this.guardiansService.update(this.bookingData.id, this.bookingData).subscribe((response: any) => {
+      this.dataSource.data = this.dataSource.data.map((o: Booking) => {
         if (o.id == response.id) {
           o = response;
         }
@@ -136,18 +95,20 @@ export class UpcomingComponent  {
 
   }
   onSubmit() {
-    if (this.upcomingForm.form.valid) {
+    if (this.guardianForm.form.valid) {
       console.log('valid');
       if (this.isEditMode) {
         console.log('about to update');
-        this.updateUpcoming();
+        this.updateGuardian();
       } else {
         console.log('about to create');
-        this.addUpcoming();
+        this.addGuardian();
       }
       this.cancelEdit();
     } else {
       console.log('Invalid data');
     }
   }
-}*/
+}
+
+
