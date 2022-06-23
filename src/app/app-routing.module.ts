@@ -14,6 +14,7 @@ import {MainComponent} from "./bookings/pages/main/main.component";
 import {BookingsStudioProfileComponent } from './studio/studio_profile/pages/bookings/bookings-studio-profile.component';
 import {UpcomingComponent } from './studio/studio-profile-admin/pages/home/home.component';
 import{BookingListComponent} from "./studio/studio-profile-admin/pages/booking-list/booking-list.component";
+import {BookTheStudioComponent} from "./studio/studio_profile/pages/book-the-studio/book-the-studio.component";
 
 const routes: Routes = [
   {path: 'studio-profile/bookings', component: BookingsStudioProfileComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path: 'bookings', component: BookingsComponent},
   {path: 'home/near-you', component: StudiosComponent},
   {path:'admin/home', component: UpcomingComponent},
-  {path: 'admin/home/bookings',component:BookingListComponent}
+  {path: 'admin/home/bookings',component:BookingListComponent},
+  {path: 'studio-profile/book-the-studio',component:BookTheStudioComponent}
 
 ];
 

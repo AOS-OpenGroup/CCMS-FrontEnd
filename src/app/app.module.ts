@@ -41,7 +41,7 @@ import { BookingsStudioProfileComponent } from './studio/studio_profile/pages/bo
 import {UpcomingComponent} from "./studio/studio-profile-admin/pages/home/home.component";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { BookingListComponent } from './studio/studio-profile-admin/pages/booking-list/booking-list.component';
-import { BookTheStudioComponent } from './studio/studio-profile/pages/book-the-studio/book-the-studio.component';
+import { BookTheStudioComponent } from './studio/studio_profile/pages/book-the-studio/book-the-studio.component';
 import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.component';
 
 
