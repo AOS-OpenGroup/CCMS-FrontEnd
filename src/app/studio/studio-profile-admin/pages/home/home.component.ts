@@ -18,7 +18,7 @@ import * as _ from "lodash";
 export class UpcomingComponent implements OnInit {
   dataSource: MatTableDataSource<any>;
   bookingData: Booking;
-  displayedColumns: string[] = ['id', 'customerId', 'name', 'date', 'time', 'status']
+  displayedColumns: string[] = ['id', 'customer', 'date', 'time', 'status']
 
   @ViewChild('studentForm', {static: false})
   guardianForm!: NgForm;

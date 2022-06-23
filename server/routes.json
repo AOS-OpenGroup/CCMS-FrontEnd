@@ -1,7 +1,6 @@
 {
   "/api/v1/*": "/$1",
   "/auth/*": "/$1",
-  "/api/v1/upcoming": "/upcoming",
   "/sign-in": "/signin",
   "/sign-up": "/signup",
   "/studios/:studiosId/title": "/competences?studiosId=:studiosId&_expand=title"
