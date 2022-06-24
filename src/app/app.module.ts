@@ -43,6 +43,8 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { BookingListComponent } from './studio/studio-profile-admin/pages/booking-list/booking-list.component';
 import { BookTheStudioComponent } from './studio/studio_profile/pages/book-the-studio/book-the-studio.component';
 import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.component';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
 
 
 @NgModule({
@@ -93,7 +95,9 @@ import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

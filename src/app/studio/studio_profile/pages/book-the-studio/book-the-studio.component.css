@@ -1,0 +1,121 @@
+
+
+.container1{
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+
+}
+
+.container2{
+  float: left;
+  width: 65%;
+  box-sizing: border-box;
+
+}
+.container3{
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container3a{
+  width: 60%;
+  background-color: #E1E5E8;
+  border-radius: 20px;
+  border: solid 2px rgb(0,0,0,0.2);
+
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: #E1E5E8;
+  border: solid 2px rgb(0,0,0,0.2);
+}
+
+h1{
+  margin: 20px;
+  font-weight: bold;
+}
+
+.tittle{
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+
+mat-divider{
+  margin-bottom: 40px;
+}
+
+.calendar{
+  padding: 0;
+  width: 80%;
+  border: solid 2px rgb(0,0,0,0.2);
+  margin: 0 auto;
+  background-color: #E1E5E8;
+}
+
+
+.divider2{
+  width: 100%;
+  float: left;
+  margin-top: 40px;
+}
+
+p{
+  margin: 20px;
+  font-size: 18px;
+}
+
+.cancelled{
+  margin: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.phrase{
+  float: left;
+  width: 80%;
+
+  box-sizing: border-box;
+}
+
+.cancelled-div{
+  float: left;
+  width: 20%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.container4{
+  float: left;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mat-raised-button{
+  display: table-cell;
+  font-size: 24px;
+  margin-left: 8px;
+  width: 20%;
+  margin-bottom: 30px;
+  height: 60px;
+  border-radius: 20px;
+}
