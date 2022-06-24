@@ -1,0 +1,49 @@
+<app-menu></app-menu>
+
+
+
+<div>
+  <div class="container">
+    <div class="box">
+      <h1>Profile</h1>
+
+      <div style="display:{{ isEditMode ? 'block' : 'none' }};">
+
+        <h2>{{ isEditMode ? 'Edit Offer' : 'Add new Offer' }}</h2>
+        <form (submit)="onSubmit()" #profileForm='ngForm'>
+          <mat-form-field><input matInput placeholder="Name" name="name" required [(ngModel)]="profileData.name"></mat-form-field>
+          <mat-form-field><input type="text" matInput placeholder="Description" name="description" required [(ngModel)]="profileData.description"></mat-form-field>
+          <mat-form-field><input type="text" matInput placeholder="Photo link" name="photo" required [(ngModel)]="profileData.photo"></mat-form-field>
+          <mat-form-field><input type="text" matInput placeholder="Age" name="age" required [(ngModel)]="profileData.age"></mat-form-field>
+          <ng-container *ngIf="isEditMode; else elseTemplate">
+            <button mat-button color="primary">Update</button>
+            <button mat-button color="warn" (click)="cancelEdit()">Cancel</button>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <button mat-button color="primary">Add</button>
+          </ng-template>
+        </form>
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="container" *ngFor="let profile of dataSource">
+
+
+    <div *ngIf="profile.id == 1" class="box g">
+      <div class="left">
+        <img class="pphoto" src="{{profile.photo}} " alt=""><br><br>
+        <span class="name">{{profile.name}}</span>
+      </div>
+      <div class="right">
+        <p>
+          <b>Description: </b>{{profile.description}}<br><br>
+          <b>Age: </b>{{profile.age}}
+        </p>
+        <a href="javascript:void(0)" (click)="editItem(profile)"><mat-icon>edit</mat-icon></a>
+      </div>
+    </div>
+  </div>
+</div>

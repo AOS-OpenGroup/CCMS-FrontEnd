@@ -1,0 +1,49 @@
+.box{
+  width: 1200px;
+
+}
+
+.box.g{
+  width: 1200px;
+  background-color: lightgrey;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center ;
+
+}
+
+.left{
+  width:25%;
+  float: left;
+  text-align: center;
+}
+
+.right{
+  width:75%;
+  float: right;
+
+}
+
+.right p{
+  margin-left: 40px;
+  font-size: 25px;
+  line-height: 1.3em;
+}
+
+.name{
+  margin-top: 25px;
+  font-size: 25px;
+}
+
+img.pphoto{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10000px;
+}
