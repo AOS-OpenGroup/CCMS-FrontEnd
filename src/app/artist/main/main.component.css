@@ -1,0 +1,67 @@
+h1{
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.heading{
+  margin: 1.5rem 0 1.5rem 1rem;
+}
+
+.trending-container{
+  display: flex;
+  flex-direction: column;
+  margin:3rem;
+}
+
+.trending-cards{
+  border-radius: 10px;
+  background-color: #E1E5E8;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-gap: 40px;
+}
+
+.card {
+  max-width: 350px;
+}
+
+.card-title{
+  margin: 0px;
+}
+
+
+.recently-container{
+  display: flex;
+  flex-direction: column;
+  margin:3rem;
+}
+
+.recently-cards{
+  border-radius: 10px;
+  background-color: #E1E5E8;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-gap: 40px;
+}
+
+.near-container{
+  display: flex;
+  flex-direction: column;
+  margin:3rem;
+}
+
+.near-cards{
+  border-radius: 10px;
+  background-color: #E1E5E8;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-gap: 40px;
+}
+
+.example-form-field {
+  padding: 10px;
+  width: 200px;
+}

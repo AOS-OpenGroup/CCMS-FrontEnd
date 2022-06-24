@@ -1,5 +1,14 @@
 <app-menu></app-menu>
 <app-studio-profile>
-  <h1>THIS IS GALLERY</h1>
+  <h1>GALLERY</h1>
+  <mat-grid-list cols="4" rowHeight="330px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+        <img src="{{tile.url}}" alt="img">
+    </mat-grid-tile>
+  </mat-grid-list>
 </app-studio-profile>
 <app-footer></app-footer>

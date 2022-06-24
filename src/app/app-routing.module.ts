@@ -6,8 +6,8 @@ import {EquipmentComponent} from "./studio_profile/pages/equipment/equipment.com
 import {GalleryComponent} from "./studio_profile/pages/gallery/gallery.component";
 import {ReviewsComponent} from "./studio_profile/pages/reviews/reviews.component";
 import {MenuComponent} from "./menu/menu.component";
-import {SignInComponent} from "./sign-in/sign-in.component";
-import {SignUpComponent} from "./sign-up/sign-up.component";
+import {SignInComponent} from "./security/pages/sign-in/sign-in.component";
+import {SignUpComponent} from "./security/pages/sign-up/sign-up.component";
 import {OverviewComponent} from "./studio_profile/pages/overview/overview.component";
 import {HomeComponent} from "./home/pages/home/home.component";
 import {SignUpAdminComponent} from "./sign-up-admin/sign-up-admin.component";
@@ -16,8 +16,13 @@ import {SettingsComponent} from "./settings/settings.component";
 import {StudiosComponent} from "./artists/pages/studios/studios.component";
 import {ProfileComponent} from "./artists/pages/profile/profile/profile.component";
 
+import {MainComponent} from "./artist/main/main.component";
+
+import { BookingsStudioProfileComponent } from './studio_profile/pages/bookings-studio-profile/bookings-studio-profile.component';
+
+
 const routes: Routes = [
-  {path: 'studio-profile/bookings', component: BookingComponent},
+  {path: 'studio-profile/bookings', component: BookingsStudioProfileComponent},
   {path: 'studio-profile/equipment', component: EquipmentComponent},
   {path: 'studio-profile/gallery', component: GalleryComponent},
   {path: 'studio-profile/reviews', component: ReviewsComponent},
@@ -33,7 +38,10 @@ const routes: Routes = [
   {path: 'booking', component: BookingComponent},
   {path: 'bookings', component: BookingsComponent},
   {path: 'settings', component: SettingsComponent},
-  {path: 'studios/near-you', component: StudiosComponent}
+
+  {path: 'studios/near-you', component: StudiosComponent},
+
+  {path: 'artist/main', component: MainComponent}
 
 
 ];
