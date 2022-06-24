@@ -45,26 +45,25 @@
   ],
   "reviews": [
     {
-      "username": "juan",
-      "studioId":2,
-      "date": "monday",
-      "description": "sasasass",
       "id": 1,
-      "musicianId": 1
+      "musicianId": 1,
+      "studioId": 2,
+      "comment": "not a good one lol",
+      "score": 4.6
     },
     {
-      "username": "marioo",
-      "studioId":2,
-      "date": "friday",
-      "description": "not here lol",
-      "id": 1,
-      "musicianId": 1
+      "id": 2,
+      "musicianId": 1,
+      "studioId": 2,
+      "comment": "saw better ones",
+      "score": 4.7
     },
     {
-      "username": "marcos",
-      "date": "7 de jun ,2022",
-      "message": "falla en el motor",
-      "id": 2
+      "id": 2,
+      "musicianId": 1,
+      "studioId": 2,
+      "comment": "not what i expected, but ok",
+      "score": 4.4
     }
   ],
   "upcoming": [

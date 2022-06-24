@@ -13,40 +13,25 @@ import * as _ from "lodash";
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent implements OnInit {
-  musicianId!: number;
-  guardianData: Review;
+  studioId!: number;
   reviewsData: Review[];
   val1: number;
-  displayedColumns: string[] = ['id', 'username', 'date', 'message', 'actions']
-
-  @ViewChild('studentForm', {static: false})
-  guardianForm!: NgForm;
-
-  @ViewChild(MatPaginator, {static: true})
-  paginator!: MatPaginator;
-
-  @ViewChild(MatSort)
-  sort!: MatSort;
 
   isEditMode = false;
 
-  constructor(private guardiansService: ReviewsService) {
-    this.musicianId = 1;
-    this.guardianData = {} as Review;
+  constructor(private reviewsService: ReviewsService) {
+    //this.studioId = localStorage.getItem('studioId');
+    this.studioId = 1;
     this.reviewsData = [];
     this.val1 = 4;
   }
 
   ngOnInit(): void {
-    this.getReviewsByMusicianId(this.musicianId);
+    this.getReviewsByStudioId(this.studioId);
   }
 
-  ngAfterViewInit(): void {
-
-  }
-
-  getReviewsByMusicianId(musicianId: number){
-    this.guardiansService.getByMusicianId(musicianId).subscribe((response: any) => {
+  getReviewsByStudioId(studioId: number){
+    this.reviewsService.getByStudioId(studioId).subscribe((response: any) => {
       this.reviewsData = response;
     });
   }
