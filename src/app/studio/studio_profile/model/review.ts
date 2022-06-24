@@ -1,7 +1,7 @@
 export interface Review {
     id: number;
-    username: string;
-    date: string;
-    message: string;
-    description: string;
+    musicianId: number;
+    studioId: number;
+    comment: string;
+    score: number;
 }

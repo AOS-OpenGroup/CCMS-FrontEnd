@@ -21,7 +21,7 @@ export class ReviewsComponent implements OnInit {
 
   constructor(private reviewsService: ReviewsService) {
     //this.studioId = localStorage.getItem('studioId');
-    this.studioId = 1;
+    this.studioId = 2;
     this.reviewsData = [];
     this.val1 = 4;
   }
