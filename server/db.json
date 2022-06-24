@@ -21,5 +21,29 @@
       "distance": "2km away",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndw_Pxs1fvrSTJG2F7YYxLyYAz4Z_aJK5ew&usqp=CAU"
     }
+  ],
+
+  "artists": [
+    {
+      "id": 1,
+      "name": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "age": "45",
+      "photo": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "age": "56",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaW8Nyo9cfD39Ex2tgBGTL9eEqz2eHs-zGcw&usqp=CAU"
+    },
+    {
+      "id": 3,
+      "name": "Studio 214 UPC",
+      "description": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
+      "age": "31",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndw_Pxs1fvrSTJG2F7YYxLyYAz4Z_aJK5ew&usqp=CAU"
+    }
   ]
 }

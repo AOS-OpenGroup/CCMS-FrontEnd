@@ -3,6 +3,7 @@
 }
 
 .container{
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-content: center ;
@@ -14,3 +15,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
+
+.example-card img{
+  height: 250px;
+  min-width: 100%;
+  object-fit: cover;
+}
+

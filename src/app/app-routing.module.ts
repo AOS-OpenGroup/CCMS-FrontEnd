@@ -5,7 +5,6 @@ import {BookingComponent} from "./studio_profile/pages/booking/booking.component
 import {EquipmentComponent} from "./studio_profile/pages/equipment/equipment.component";
 import {GalleryComponent} from "./studio_profile/pages/gallery/gallery.component";
 import {ReviewsComponent} from "./studio_profile/pages/reviews/reviews.component";
-import {ProfileComponent} from "./profile/profile.component";
 import {MenuComponent} from "./menu/menu.component";
 import {SignInComponent} from "./sign-in/sign-in.component";
 import {SignUpComponent} from "./sign-up/sign-up.component";
@@ -15,6 +14,7 @@ import {SignUpAdminComponent} from "./sign-up-admin/sign-up-admin.component";
 import {BookingsComponent} from "./bookings/pages/bookings/bookings.component";
 import {SettingsComponent} from "./settings/settings.component";
 import {StudiosComponent} from "./artists/pages/studios/studios.component";
+import {ProfileComponent} from "./artists/pages/profile/profile/profile.component";
 
 const routes: Routes = [
   {path: 'studio-profile/bookings', component: BookingComponent},

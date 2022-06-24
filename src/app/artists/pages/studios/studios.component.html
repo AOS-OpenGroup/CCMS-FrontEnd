@@ -1,11 +1,16 @@
+<app-menu></app-menu>
+
+
 <div class="container">
   <div class="box">
+    <h1>Near You!</h1>
     <div class="card1">
-      <mat-card  *ngFor="let studio of dataSource" class="example-card">
-        <img mat-card-image src="{{studio.img}}" alt="Photo of a Shiba Inu">
+      <mat-card  *ngFor="let studio of dataSource"  class="example-card">
+
+          <img mat-card-image src="{{studio.img}}" alt="Photo of a Shiba Inu">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{studio.title}}</mat-card-title>
+          <mat-card-title>{{studio.title}} </mat-card-title>
           <mat-card-subtitle>{{studio.distance}}</mat-card-subtitle>
         </mat-card-header>
 
