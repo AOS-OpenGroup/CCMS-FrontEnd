@@ -1,20 +1,23 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
-import { Review } from '../model/review';
+import { Musician } from '../model/musician';
+
 @Injectable({
   providedIn: 'root'
 })
-export class ReviewsService {
+export class MusicianService {
 
-  basePath='http://localhost:3000/api/v1/reviews';
+  basePath='http://localhost:3000/api/v1/musicians'
   httpOptions={
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
     })
   }
+
   @Output() SetCurrent: EventEmitter<any>=new EventEmitter();
   constructor(private http: HttpClient) { }
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // Default Error Handling
@@ -27,41 +30,35 @@ export class ReviewsService {
     return throwError(() => new Error('Something happened with request, please try again later.'));
   }
 
-  // Create Review
-  create(item: any): Observable<Review> {
-    return this.http.post<Review>(this.basePath, JSON.stringify(item), this.httpOptions)
+  create(item: any): Observable<Musician> {
+    return this.http.post<Musician>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
 
-  // Get Review by id
-  getById(id: any): Observable<Review> {
-    return this.http.get<Review>(`${this.basePath}/${id}`, this.httpOptions)
+  update(id: any, item: any): Observable<Musician> {
+    return this.http.put<Musician>(`${this.basePath}/${id}`, JSON.stringify(item),this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
 
-  // Get all Reviews
-  getAll(): Observable<Review> {
-    return this.http.get<Review>(this.basePath, this.httpOptions)
+  getAll(): Observable<Musician> {
+    return this.http.get<Musician>(this.basePath, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
-
-    // Get Reviews by studio id
-  getByStudioId(studioId: any): Observable<Review> {
-    return this.http.get<Review>(`${this.basePath}?studioId=${studioId}`, this.httpOptions)
-      .pipe(
-        retry(2),
-          catchError(this.handleError)
-      );
-  }
-
-
+    // Get Reviews by musician id
+    getByMusicianId(musicianId: any): Observable<Musician> {
+        return this.http.get<Musician>(`${this.basePath}?musiciand=${musicianId}`, this.httpOptions)
+          .pipe(
+            retry(2),
+              catchError(this.handleError)
+          );
+    }
 }

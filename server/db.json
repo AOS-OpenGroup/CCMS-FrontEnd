@@ -23,7 +23,16 @@
     }
   ],
   "musicians" :[
-
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Juan Lopez",
+      "email": "juanlo@gmail.com"
+    }
   ],
   "users": [
     {

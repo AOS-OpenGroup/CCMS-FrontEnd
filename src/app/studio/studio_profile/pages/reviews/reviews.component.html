@@ -16,7 +16,7 @@
         <li *ngFor="let review of reviewsData">
           <div class="grid box-review p-5">
             <div class="col flex flex-column justify-content-center m-2">
-              <p class="font-semibold p-2">{{ review.musicianId }}</p>
+              <p class="font-semibold p-2">{{ getNamebyMusicianId(review.musicianId) }}</p>
               <span clas="p-2"
                 ><i class="pi pi-car p-2"></i>{{ review.score }}</span>
             </div>
