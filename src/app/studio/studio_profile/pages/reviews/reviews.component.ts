@@ -1,11 +1,7 @@
 
 import {AfterViewInit, Component, OnInit, ViewChild, Input} from '@angular/core';
-import {MatTableDataSource} from "@angular/material/table";
 import { Review } from '../../model/review';
 import { ReviewsService } from '../../services/reviews.service';
-import {NgForm} from "@angular/forms";
-import {MatPaginator} from "@angular/material/paginator";
-import {MatSort} from "@angular/material/sort";
 import * as _ from "lodash";
 @Component({
   selector: 'app-reviews',
@@ -15,12 +11,14 @@ import * as _ from "lodash";
 export class ReviewsComponent implements OnInit {
   studioId!: number;
   reviewsData: Review[];
+  //musiciansData: Musician[];
   val1: number;
 
   isEditMode = false;
 
   constructor(private reviewsService: ReviewsService) {
-    //this.studioId = localStorage.getItem('studioId');
+    //this.musicianId = localStorage.getItem('musicianId');
+    //studioId is got as a router params
     this.studioId = 2;
     this.reviewsData = [];
     this.val1 = 4;
