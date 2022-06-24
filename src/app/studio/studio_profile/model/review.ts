@@ -3,4 +3,5 @@ export interface Review {
     username: string;
     date: string;
     message: string;
+    description: string;
 }

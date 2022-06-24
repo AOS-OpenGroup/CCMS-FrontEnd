@@ -54,6 +54,15 @@ export class ReviewsService {
       );
   }
 
+    // Get Reviews by mechanic id
+  getByMusicianId(musicianId: any): Observable<Review> {
+    return this.http.get<Review>(`${this.basePath}?musicianId=${musicianId}`, this.httpOptions)
+      .pipe(
+        retry(2),
+          catchError(this.handleError)
+      );
+  }
+
   update(id: any, item: any): Observable<Review> {
     return this.http.put<Review>(`${this.basePath}/${id}`, JSON.stringify(item),this.httpOptions)
       .pipe(

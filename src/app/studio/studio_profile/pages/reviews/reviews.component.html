@@ -1,50 +1,36 @@
 <app-menu></app-menu>
-<app-studio-profile>
-  
-  <div class="table-wrapper">
+  <app-studio-profile>
     <h1>Reviews</h1>
-    <h2>{{ isEditMode ? 'Edit Review' : 'Add new Review' }}</h2>
-    <form (submit)="onSubmit()" #studentForm='ngForm'>
-      <mat-form-field><input matInput placeholder="Username" name="username" required [(ngModel)]="guardianData.username"></mat-form-field>
-      <mat-form-field><input type="text" matInput placeholder="Date" name="date" required [(ngModel)]="guardianData.date"></mat-form-field>
-      <mat-form-field><input type="text" matInput placeholder="Message" name="message" required [(ngModel)]="guardianData.message"></mat-form-field>
-      <ng-container *ngIf="isEditMode; else elseTemplate">
-        <button mat-button color="primary">Update</button>
-        <button mat-button color="warn" (click)="cancelEdit()">Cancel</button>
-      </ng-container>
-      <ng-template #elseTemplate>
-        <button mat-button color="primary">Add</button>
-      </ng-template>
-    </form>
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> #Id</th>
-        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-      </ng-container>
-      <ng-container matColumnDef="username">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Username</th>
-        <td mat-cell *matCellDef="let element">{{ element.username }}</td>
-      </ng-container>
-      <ng-container matColumnDef="message">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Message</th>
-        <td mat-cell *matCellDef="let element">{{ element.message }}</td>
-      </ng-container>
-      <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date</th>
-        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
-      </ng-container>
-      <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef> Actions</th>
-        <td mat-cell *matCellDef="let element">
-          <a href="javascript:void(0)" (click)="editItem(element)"><mat-icon>edit</mat-icon></a>
-          <a href="javascript:void(0)" (click)="deleteItem(element.id)"><mat-icon>delete</mat-icon></a>
-          <button href="javascript:void(0)" (click)="selectGuardian(element)" mat-raised-button color="primary">Set Current</button>
-        </td>
-      </ng-container>
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns" [ngClass]="{ 'editable-row': guardianData.id === row.id }"></tr>
-    </table>
-    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
-  </div>
-</app-studio-profile>
+    <div>
+      <span class="font-semibold text-2xl p-3"> 4.5 </span>
+      <span class="px-2">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="px-2" style="font-size: 2rem">star</mat-icon>
+      </span>
+    </div>
+    <div class="flex flex-column">
+      <ul style="list-style: none">
+        <li *ngFor="let review of reviewsData">
+          <div class="grid box-review p-5">
+            <div class="col flex flex-column justify-content-center m-2">
+              <p class="font-semibold p-2">{{ review.username }}</p>
+              <span clas="p-2"
+                ><i class="pi pi-car p-2"></i>{{ review.date }}</span
+              >
+            </div>
+            <div class="col">
+              <div class="grid align-items-center p-2">
+                <span class="font-semibold pl-6" style="font-size: 1.1rem">
+                  {{ review.description }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </app-studio-profile>
 <app-footer></app-footer>

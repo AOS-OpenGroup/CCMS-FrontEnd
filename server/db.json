@@ -45,10 +45,20 @@
   ],
   "reviews": [
     {
-      "username": "delamarzp",
-      "date": "sassas",
-      "message": "sasasass",
-      "id": 1
+      "username": "juan",
+      "studioId":2,
+      "date": "monday",
+      "description": "sasasass",
+      "id": 1,
+      "musicianId": 1
+    },
+    {
+      "username": "marioo",
+      "studioId":2,
+      "date": "friday",
+      "description": "not here lol",
+      "id": 1,
+      "musicianId": 1
     },
     {
       "username": "marcos",
