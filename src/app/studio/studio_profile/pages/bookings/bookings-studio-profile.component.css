@@ -1,4 +1,4 @@
-.conteiner{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,3 +13,19 @@
   .example-full-width {
     width: 100%;
   }
+
+  .title {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .image {
+    padding: 10px;
+  }
+  .profile-img{
+    height: 45vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  

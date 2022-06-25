@@ -1,15 +1,30 @@
 <app-menu></app-menu>
-<app-studio-profile>
-    
-    <div class="conteiner">
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'overview']">Overview</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'gallery']">Gallery</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'equipment']">Equipment</a>
+
+<mat-divider [vertical]="true" [inset]="true"></mat-divider>
+<mat-card class="example-card">
+  <img mat-card-image src={{studio.img}} alt="Studio profile image" class="profile-img">
+  <mat-card-content>
+    <mat-card-title>{{studio.name}}</mat-card-title>
+    <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+    <p>
+      {{studio.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<ng-content></ng-content>
+    <div class="container p-6 m-3">
         <h1 class="font-semibold text-4xl text-center mb-6">Bookings</h1>
         <div class="AdressData">
-            
             <h3>{{studio.address}}</h3>
             <button mat-raised-button color="primary">Book the studio</button>
         </div>
         <mat-divider></mat-divider>
-        <div class="ContactUS">
+        <div class="ContactUS m-3">
             <h1>Contact us</h1>
             <h3>studio214@gmail.com</h3>
             <h3>+51 983 564 324</h3>
@@ -47,5 +62,4 @@
             </div>
         </div>
     </div>
-</app-studio-profile>
 <app-footer></app-footer>
