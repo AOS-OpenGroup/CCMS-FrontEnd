@@ -54,8 +54,8 @@ export class MusicianService {
       );
   }
     // Get Reviews by musician id
-    getByMusicianId(musicianId: any): Observable<Musician> {
-        return this.http.get<Musician>(`${this.basePath}?musiciand=${musicianId}`, this.httpOptions)
+    getById(musicianId: any): Observable<Musician> {
+        return this.http.get<Musician>(`${this.basePath}/${musicianId}`, this.httpOptions)
           .pipe(
             retry(2),
               catchError(this.handleError)

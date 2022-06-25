@@ -5,6 +5,7 @@ import { ReviewsService } from '../../services/reviews.service';
 import * as _ from "lodash";
 import { Musician } from 'src/app/musicians/model/musician';
 import { MusicianService } from 'src/app/musicians/services/musician.service';
+import { shareReplay } from 'rxjs';
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
@@ -13,7 +14,7 @@ import { MusicianService } from 'src/app/musicians/services/musician.service';
 export class ReviewsComponent implements OnInit {
   studioId!: number;
   reviewsData: Review[];
-  musicianData: Musician
+  musiciansData: Musician [];
   val1: number;
 
   isEditMode = false;
@@ -23,13 +24,20 @@ export class ReviewsComponent implements OnInit {
     //studioId is got as a router params
     this.studioId = 2;
     this.reviewsData = [];
-    this.musicianData = {} as Musician;
+    this.musiciansData = [];
     this.val1 = 4;
   }
 
   ngOnInit(): void {
     this.getReviewsByStudioId(this.studioId);
+    
   }
+
+   ngAfterViewInit(): void{
+  //    for(let i=0; i<this.reviewsData.length; i++){
+  //      this.getNamebyMusicianId(this.reviewsData[i].musicianId);
+  //    }
+   }
 
   getReviewsByStudioId(studioId: number){
     this.reviewsService.getByStudioId(studioId).subscribe((response: any) => {
@@ -37,11 +45,17 @@ export class ReviewsComponent implements OnInit {
     });
   }
 
-  getNamebyMusicianId(musicianId: number) : string{
-    this.musiciansService.getByMusicianId(musicianId).subscribe((response: any) => {
-      this.musicianData = response;
+   getName(id: number) :any{
+     this.getNamebyMusicianId(id);
+     console.log(this.musiciansData)
+     return this.musiciansData;
+   }
+
+  getNamebyMusicianId(musicianId: number){
+    this.musiciansService.getById(musicianId).subscribe((response: any) => {
+      this.musiciansData = response;
+      return;
     });
-    return this.musicianData.name;
   }
 
 

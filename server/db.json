@@ -60,21 +60,21 @@
       "id": 1,
       "musicianId": 1,
       "studioId": 2,
-      "comment": "not a good one lol",
+      "comment": "Although cosy and intimate, the studio is large enough to accommodate full album sessions. A generously-sized live room (big enough for small orchestral sessions) is complemented by a control room and three booth rooms for isolation.",
       "score": 4.6
     },
     {
       "id": 2,
-      "musicianId": 1,
+      "musicianId": 4,
       "studioId": 2,
-      "comment": "saw better ones",
+      "comment": "Combined with top of the range monitoring (ATC), acoustics designed by the legendary Nick Whitaker, and a large, curated collection of vintage instruments and microphones, the studio is the perfect place for writing, tracking or mixing.",
       "score": 4.7
     },
     {
       "id": 2,
-      "musicianId": 1,
+      "musicianId": 3,
       "studioId": 2,
-      "comment": "not what i expected, but ok",
+      "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
       "score": 4.4
     }
   ],
