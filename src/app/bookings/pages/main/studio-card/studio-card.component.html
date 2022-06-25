@@ -4,8 +4,11 @@
             <img mat-card-image src="{{ studio.img }}" alt="car image">
             <div class="car-information">
               <mat-card-title>{{ studio.name }}</mat-card-title>
-              <div>Address: {{ studio.address }}</div>
-              <div>Description: {{ studio.description}}</div>
+              <div>{{ studio.address }}</div>
+              <div>{{ studio.description}}</div>
+              <mat-card-actions>
+                <!-- <a  [routerLink]= /studio-profile/{{studio.id}}overview"><button mat-stroked-button>See more</button></a> -->
+              </mat-card-actions>
               <!-- <a [routerLink]="moreInformationUrl">See more</a> -->
             </div>
           </mat-card>

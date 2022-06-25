@@ -3,23 +3,23 @@
     {
       "id": 1,
       "name": "Studio 214 UPC",
-      "address": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
-      "description": "2km away",
-      "img": "https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "address": "Santiago de Surco",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/3413462/pexels-photo-3413462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 2,
-      "name": "Studio 214 ULIMA",
-      "address": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
-      "description": "2km away",
-      "img": "https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "name": "Studio 214 USIL",
+      "address": "La Molina",
+      "description": "There's enough space for a large band to play together in the live room, and interchangeable acoustic panels for a variety of room sounds. ",
+      "img": "https://images.pexels.com/photos/2426085/pexels-photo-2426085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 3,
       "name": "Studio 214 PUCP",
-      "address": "Accumsan velit volutpat venenatis metus ultricies morbi sodales.",
-      "description": "2km away",
-      "img": "https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "address": "San Miguel",
+      "description": "Our studio is equipped with a Phillips Hue lighting system throughout. Clients can make the space their own, altering the hue and brightness of any light in the studio. ",
+      "img": "https://images.pexels.com/photos/1869322/pexels-photo-1869322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
   "musicians" :[
