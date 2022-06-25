@@ -9,17 +9,38 @@
     },
     {
       "id": 2,
-      "name": "Studio 214 USIL",
+      "name": "Studio 456 USIL",
       "address": "La Molina",
       "description": "There's enough space for a large band to play together in the live room, and interchangeable acoustic panels for a variety of room sounds. ",
       "img": "https://images.pexels.com/photos/2426085/pexels-photo-2426085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 3,
-      "name": "Studio 214 PUCP",
+      "name": "Studio 514 PUCP",
       "address": "San Miguel",
       "description": "Our studio is equipped with a Phillips Hue lighting system throughout. Clients can make the space their own.",
       "img": "https://images.pexels.com/photos/1869322/pexels-photo-1869322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 4,
+      "name": "Studio 176 UDEP",
+      "address": "Miraflores",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/2426085/pexels-photo-2426085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 5,
+      "name": "Studio 321 UP",
+      "address": "San Isidro",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/1869322/pexels-photo-1869322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 6,
+      "name": "Studio 154 ESAN",
+      "address": "Monterrico",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/3413462/pexels-photo-3413462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
   "musicians" :[
