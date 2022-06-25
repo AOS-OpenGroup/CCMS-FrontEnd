@@ -6,6 +6,9 @@ import * as _ from "lodash";
 import { Musician } from 'src/app/musicians/model/musician';
 import { MusicianService } from 'src/app/musicians/services/musician.service';
 import { shareReplay } from 'rxjs';
+import { Studio } from 'src/app/bookings/model/studio';
+import { ActivatedRoute } from '@angular/router';
+import { StudioProfileService } from '../../services/studio-profile.service';
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
@@ -16,10 +19,11 @@ export class ReviewsComponent implements OnInit {
   reviewsData: Review[];
   musiciansData: Musician [];
   val1: number;
+  studio!: Studio;
 
   isEditMode = false;
 
-  constructor(private reviewsService: ReviewsService, private musiciansService: MusicianService) {
+  constructor(private route: ActivatedRoute, private studiosService: StudioProfileService, private reviewsService: ReviewsService, private musiciansService: MusicianService) {
     //this.musicianId = localStorage.getItem('musicianId');
     //studioId is got as a router params
     this.studioId = 2;
@@ -30,7 +34,16 @@ export class ReviewsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getReviewsByStudioId(this.studioId);
+        // First get the product id from the current route.
+        const routeParams = this.route.snapshot.paramMap;
+        const studioId = Number(routeParams.get('studioId'));
     
+        this.getStudio(studioId);
+  }
+  getStudio(studioId: number) : void{
+    this.studiosService.getById(studioId).subscribe((response: any) => {
+      this.studio = response;
+    });
   }
 
   getReviewsByStudioId(studioId: number){

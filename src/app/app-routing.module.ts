@@ -16,10 +16,10 @@ import {UpcomingComponent } from './studio/studio-profile-admin/pages/home/home.
 import{BookingListComponent} from "./studio/studio-profile-admin/pages/booking-list/booking-list.component";
 
 const routes: Routes = [
-  {path: 'studio-profile/bookings', component: BookingsStudioProfileComponent},
+  {path: 'studio-profile/:studioId/bookings', component: BookingsStudioProfileComponent},
   {path: 'studio-profile/equipment', component: EquipmentComponent},
   {path: 'studio-profile/gallery', component: GalleryComponent},
-  {path: 'studio-profile/reviews', component: ReviewsComponent},
+  {path: 'studio-profile/:studioId/reviews', component: ReviewsComponent},
   {path: '', redirectTo: 'sign-up' , pathMatch: 'full'},
   {path: 'profile', component: ProfileComponent},
   {path: 'sign-up', component: SignUpComponent},
