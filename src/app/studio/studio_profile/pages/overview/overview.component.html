@@ -18,7 +18,7 @@
 </mat-card>
 <ng-content></ng-content>
 
-<mat-grid-list cols="1" rowHeight="150px">
+<mat-grid-list cols="1" rowHeight="200px">
     <mat-grid-tile>
       <h1 class="font-semibold text-4xl text-center mb-6"> Overview </h1>
     </mat-grid-tile>
@@ -26,12 +26,12 @@
       <img
         src={{studio.img}}
         alt=""
-        width="300 px"
+        width="500 px"
 
       />
     </mat-grid-tile>
     <mat-grid-tile>
-      <p>
+      <p class="text-base">
         {{studio.description}}
       </p>
     </mat-grid-tile>
