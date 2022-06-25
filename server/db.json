@@ -53,6 +53,11 @@
       "id": 2,
       "name": "Juan Lopez",
       "email": "juanlo@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Pedro Perez",
+      "email": "pedrope@gmail.com"
     }
   ],
   "users": [
@@ -92,11 +97,25 @@
       "score": 4.7
     },
     {
-      "id": 2,
+      "id": 3,
       "musicianId": 3,
-      "studioId": 2,
+      "studioId": 1,
       "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
       "score": 4.4
+    },
+    {
+      "id": 4,
+      "musicianId": 3,
+      "studioId": 1,
+      "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
+      "score": 4.9
+    },
+    {
+      "id": 5,
+      "musicianId": 3,
+      "studioId": 3,
+      "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
+      "score": 4.9
     }
   ],
   "upcoming": [

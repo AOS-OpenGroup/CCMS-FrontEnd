@@ -17,7 +17,7 @@ import{BookingListComponent} from "./studio/studio-profile-admin/pages/booking-l
 
 const routes: Routes = [
   {path: 'studio-profile/:studioId/bookings', component: BookingsStudioProfileComponent},
-  {path: 'studio-profile/equipment', component: EquipmentComponent},
+  {path: 'studio-profile/:studioId/equipment', component: EquipmentComponent},
   {path: 'studio-profile/:studioId/gallery', component: GalleryComponent},
   {path: 'studio-profile/:studioId/reviews', component: ReviewsComponent},
   {path: '', redirectTo: 'sign-up' , pathMatch: 'full'},

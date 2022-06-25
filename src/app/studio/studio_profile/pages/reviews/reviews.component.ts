@@ -15,7 +15,6 @@ import { StudioProfileService } from '../../services/studio-profile.service';
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent implements OnInit {
-  studioId!: number;
   reviewsData: Review[];
   musiciansData: Musician [];
   val1: number;
@@ -26,19 +25,17 @@ export class ReviewsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private studiosService: StudioProfileService, private reviewsService: ReviewsService, private musiciansService: MusicianService) {
     //this.musicianId = localStorage.getItem('musicianId');
     //studioId is got as a router params
-    this.studioId = 2;
     this.reviewsData = [];
     this.musiciansData = [];
     this.val1 = 4;
   }
 
   ngOnInit(): void {
-    this.getReviewsByStudioId(this.studioId);
         // First get the product id from the current route.
-        const routeParams = this.route.snapshot.paramMap;
-        const studioId = Number(routeParams.get('studioId'));
-    
-        this.getStudio(studioId);
+    const routeParams = this.route.snapshot.paramMap;
+    const studioId = Number(routeParams.get('studioId'));
+    this.getStudio(studioId);
+    this.getReviewsByStudioId(studioId);
   }
   getStudio(studioId: number) : void{
     this.studiosService.getById(studioId).subscribe((response: any) => {
