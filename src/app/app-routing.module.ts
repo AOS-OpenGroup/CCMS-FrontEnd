@@ -30,7 +30,9 @@ const routes: Routes = [
   {path: 'bookings', component: BookingsComponent},
   {path: 'home/near-you', component: StudiosComponent},
   {path:'admin/home', component: UpcomingComponent},
-  {path: 'admin/home/bookings',component:BookingListComponent}
+  {path: 'admin/home/bookings',component:BookingListComponent},
+  {path: "studio-profile/:studioId/overview",
+  component: OverviewComponent}
 
 ];
 

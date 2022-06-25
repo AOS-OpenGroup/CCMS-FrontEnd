@@ -1,22 +1,36 @@
 <app-menu></app-menu>
-<app-studio-profile>
-  <mat-grid-list cols="1" rowHeight="150px">
+<a mat-button [routerLink]="'/studio-profile/overview'">Overview</a>
+<a mat-button [routerLink]="'/studio-profile/gallery'">Gallery</a>
+<a mat-button [routerLink]="'/studio-profile/reviews'">Reviews</a>
+<a mat-button [routerLink]="'/studio-profile/bookings'">Bookings</a>
+<a mat-button [routerLink]="'/studio-profile/equipment'">Equipment</a>
+<mat-divider [vertical]="true" [inset]="true"></mat-divider>
+<mat-card class="example-card">
+  <img mat-card-image src="https://www.mondosonoro.com/wp-content/uploads/2017/09/Control-Room.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <mat-card-title>{{studio.name}}</mat-card-title>
+    <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+    <p>
+      {{studio.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<ng-content></ng-content>
+<mat-grid-list cols="1" rowHeight="150px">
     <mat-grid-tile>
       <h1 class="title"> Overview </h1>
     </mat-grid-tile>
     <mat-grid-tile>
-      <img class="image"
-        src="https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg"
+      <img
+        src={{studio.img}}
         alt=""
         width="300 px"
       />
     </mat-grid-tile>
     <mat-grid-tile>
       <p>
-        A destination for emerging music and content creation. Providing a space for artists to express, create and collaborate freely.
-        Ten 24hr State-of-the-Art acoustically treated production suites for all your artistic needs.
+        {{studio.description}}
       </p>
     </mat-grid-tile>
   </mat-grid-list>
-</app-studio-profile>
 
