@@ -15,6 +15,12 @@ export class MainComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.getStudios();
   }
 
+  getStudios() : void{
+    this.studiosService.getAll().subscribe((response: any) => {
+      this.studiosData = response;
+    });
+  }
 }

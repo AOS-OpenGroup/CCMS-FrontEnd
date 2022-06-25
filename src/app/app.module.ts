@@ -41,6 +41,7 @@ import { BookingsStudioProfileComponent } from './studio/studio_profile/pages/bo
 import {UpcomingComponent} from "./studio/studio-profile-admin/pages/home/home.component";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { BookingListComponent } from './studio/studio-profile-admin/pages/booking-list/booking-list.component';
+import { StudioCardComponent } from './bookings/pages/main/studio-card/studio-card.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { BookingListComponent } from './studio/studio-profile-admin/pages/bookin
     MainComponent,
     BookingsStudioProfileComponent,
     UpcomingComponent,
+    StudioCardComponent,
     BookingListComponent ],
   imports: [
     MatProgressSpinnerModule,
