@@ -33,12 +33,6 @@ export class ReviewsComponent implements OnInit {
     
   }
 
-   ngAfterViewInit(): void{
-  //    for(let i=0; i<this.reviewsData.length; i++){
-  //      this.getNamebyMusicianId(this.reviewsData[i].musicianId);
-  //    }
-   }
-
   getReviewsByStudioId(studioId: number){
     this.reviewsService.getByStudioId(studioId).subscribe((response: any) => {
       this.reviewsData = response;
@@ -57,31 +51,4 @@ export class ReviewsComponent implements OnInit {
       return;
     });
   }
-
-
-
-  // addGuardian() {
-  //   this.guardianData.id = 0;
-  //   this.guardiansService.create(this.guardianData).subscribe((response: any) => {
-  //     this.dataSource.data.push({...response});
-  //     this.dataSource.data = this.dataSource.data.map((o: any) => { return o; });
-  //   });
-  // }
-
-  // onSubmit() {
-  //   if (this.guardianForm.form.valid) {
-  //     console.log('valid');
-  //     if (this.isEditMode) {
-  //       console.log('about to update');
-  //       this.updateGuardian();
-  //     } else {
-  //       console.log('about to create');
-  //       this.addGuardian();
-  //     }
-  //     this.cancelEdit();
-  //   } else {
-  //     console.log('Invalid data');
-  //   }
-  // }
-
 }
