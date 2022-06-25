@@ -1,5 +1,23 @@
 <app-menu></app-menu>
-  <app-studio-profile>
+  <a mat-button [routerLink]="['/studio-profile', studio.id, 'overview']">Overview</a>
+  <a mat-button [routerLink]="'/studio-profile/gallery'">Gallery</a>
+  <a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+  <a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+  <a mat-button [routerLink]="'/studio-profile/equipment'">Equipment</a>
+
+  <mat-divider [vertical]="true" [inset]="true"></mat-divider>
+  <mat-card class="example-card">
+    <img mat-card-image src="https://www.mondosonoro.com/wp-content/uploads/2017/09/Control-Room.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <mat-card-title>{{studio.name}}</mat-card-title>
+      <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+      <p>
+        {{studio.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <ng-content></ng-content>
+
     <div class="
     reviews-section
     text-left
@@ -47,5 +65,4 @@
       <button class="mt-2" mat-raised-button click="addComment">Submit</button>
     </div>
   </div>
-  </app-studio-profile>
 <app-footer></app-footer>
