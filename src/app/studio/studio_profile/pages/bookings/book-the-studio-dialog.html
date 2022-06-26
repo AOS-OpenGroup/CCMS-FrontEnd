@@ -1,6 +1,7 @@
 <h2 mat-dialog-title>Book this studio</h2>
 <mat-dialog-content class="mat-typography">
 <div class="w-5 text-center m-0 m-auto">
+  <div>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Choose a date</mat-label>
     <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
@@ -11,26 +12,30 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Select the time</mat-label>
+    <mat-select>
+      <mat-option value="08:00">08:00 AM</mat-option>
+      <mat-option value="10:00">10:00 AM</mat-option>
+      <mat-option value="12:00">12:00 PM</mat-option>
+      <mat-option value="2:00">2:00 PM</mat-option>
+      <mat-option value="4:00">4:00 PM</mat-option>
+      <mat-option value="6:00">6:00 PM</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+</div>
 
-  <h3>Develop across all platforms</h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
 
   <h3>Speed &amp; Performance</h3>
   <p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web
-    Workers and server-side rendering. Angular puts you in control over scalability. Meet huge
-    data requirements by building data models on RxJS, Immutable.js or another push-model.</p>
-
-  <h3>Incredible tooling</h3>
-  <p>Build features quickly with simple, declarative templates. Extend the template language with
-    your own components and use a wide array of existing components. Get immediate Angular-specific
-    help and feedback with nearly every IDE and editor. All this comes together so you can focus
-    on building amazing apps rather than trying to make the code work.</p>
+    Workers and server-side rendering. Angular puts you in control over scalability.</p>
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="sayHi() ">Install</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="sayHi() ">Book and Go to Pay</button>
 </mat-dialog-actions>
 
 
