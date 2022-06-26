@@ -3,8 +3,8 @@
 <mat-divider></mat-divider>
 <div class="example-container mat-elevation-z8">
 <div id = "divCustomer" class="card">
-  <h1 align="center">AllBooking</h1>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  <h1 align="center">All Booking</h1>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table mb-4">
     <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
       <th mat-header-cell *matHeaderCellDef>
         {{column.header}}
@@ -19,9 +19,5 @@
   </table>
 
 </div>
-
 </div>
-
-
-<p>booking-list works!</p>
-
+<app-footer></app-footer>

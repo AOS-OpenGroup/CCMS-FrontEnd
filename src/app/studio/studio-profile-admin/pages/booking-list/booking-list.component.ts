@@ -61,11 +61,7 @@ export class BookingListComponent implements OnInit {
       header: 'Time',
       cell: (element: Booking) => `${element.time}`,
     },
-    // {
-    //   columnDef: 'status',
-    //   header: 'Status',
-    //   cell: (element: Booking) => `${element.status}`,
-    // }
+
   ];
   displayedColumns = this.columns.map(c => c.columnDef);
 
