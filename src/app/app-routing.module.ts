@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'studio-profile/:studioId/equipment', component: EquipmentComponent},
   {path: 'studio-profile/:studioId/gallery', component: GalleryComponent},
   {path: 'studio-profile/:studioId/reviews', component: ReviewsComponent},
-  {path: '', redirectTo: 'sign-up' , pathMatch: 'full'},
+  {path: '', redirectTo: 'sign-in' , pathMatch: 'full'},
   {path: 'profile', component: ProfileComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'sign-in', component: SignInComponent},
