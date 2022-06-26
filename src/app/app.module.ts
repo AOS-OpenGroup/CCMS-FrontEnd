@@ -47,6 +47,7 @@ import { BookTheStudioComponent } from './studio/studio_profile/pages/book-the-s
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatDialogModule} from '@angular/material/dialog';
+import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { MatDialogModule} from '@angular/material/dialog';
     StudioCardComponent,
     BookingListComponent,
     BookTheStudioComponent,
-  BookTheStudioDialog ],
+  BookTheStudioDialog,
+  PaymentComponent ],
   imports: [
     MatProgressSpinnerModule,
     MatPaginatorModule,

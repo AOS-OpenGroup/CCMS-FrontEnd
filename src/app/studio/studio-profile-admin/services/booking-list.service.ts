@@ -7,7 +7,7 @@ import { catchError, Observable, retry, throwError } from "rxjs";
   providedIn: 'root'
 })
 export class BookingListService {
-  basePath='http://localhost:3000/api/v1/Booking';
+  basePath='http://localhost:3000/api/v1/bookings';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

@@ -1,8 +1,6 @@
 export interface Booking{
-  id: number;
   studioId :number;
-  customer:string;
+  musicianId:number;
   date: string;
   time: string;
-  status: string;
 }

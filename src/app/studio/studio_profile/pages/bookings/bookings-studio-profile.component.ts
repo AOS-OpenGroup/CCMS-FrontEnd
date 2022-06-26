@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Studio } from 'src/app/bookings/model/studio';
+import { Booking } from 'src/app/studio/studio-profile-admin/model/booking';
+import { BookingListService } from 'src/app/studio/studio-profile-admin/services/booking-list.service';
 import { StudioProfileService } from '../../services/studio-profile.service';
 
 @Component({
@@ -12,17 +14,9 @@ import { StudioProfileService } from '../../services/studio-profile.service';
 })
 export class BookingsStudioProfileComponent implements OnInit {
   studio!: Studio;
-  minDate: Date;
-  maxDate: Date;
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-
-  
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]); 
   constructor(private route: ActivatedRoute, private studiosService: StudioProfileService, public dialog: MatDialog) { 
-    const currentYear = new Date().getFullYear();
-    const currentMonth = new Date().getMonth();
-    const currentDay = new Date().getDay();
-    this.minDate = new Date(currentYear - 20, currentMonth, currentDay -1);
-    this.maxDate = new Date(currentYear + 1, 11, 31);
+
   }
 
   ngOnInit(): void {
@@ -49,16 +43,48 @@ export class BookingsStudioProfileComponent implements OnInit {
   templateUrl: 'book-the-studio-dialog.html',
 })
 export class BookTheStudioDialog {
+  time: string;
+
+  studioId: number;
+  musicianId: number;
+  booking!: Booking;
   minDate: Date;
+  example!: Date;
   maxDate: Date;
-  constructor(){
+  constructor(private route :Router, private bookingsService: BookingListService){
+    this.time="";
+    this.studioId=1;
+    this.musicianId=2;
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
     const currentDay = new Date().getDay();
     this.minDate = new Date(currentYear, currentMonth, 20+currentDay);
     this.maxDate = new Date(currentYear + 1, 11, 31);
   }
-  sayHi() {
-    alert("Hi y'all")
+
+  getSelectedDropdown(time: any) {
+    this.time = time;  
+}
+getDateFormat(date: Date): string {
+  if (date === null) return "";
+
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+
+  return `${month}/${day}/${year}`;
+}
+
+  onSubmit() {
+    this.booking={
+      date: this.getDateFormat(this.example),
+      time:this.time,
+      studioId: this.studioId,
+      musicianId: this.musicianId
+    }
+    this.bookingsService.create(this.booking).subscribe((response: any) =>{
+      console.log(response);
+    })
+    this.route.navigate(['/studio-profile/book-the-studio/payment']); 
   }
 }

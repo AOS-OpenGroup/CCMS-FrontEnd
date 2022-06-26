@@ -43,7 +43,7 @@
       "img": "https://images.pexels.com/photos/3413462/pexels-photo-3413462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
-  "musicians" :[
+  "musicians": [
     {
       "id": 1,
       "name": "John Doe",
@@ -148,7 +148,7 @@
       "status": 1
     }
   ],
-  "Booking": [
+  "bookings": [
     {
       "id": 1,
       "studioId": 1,
@@ -406,6 +406,76 @@
       "date": "sas",
       "time": "aasasasas",
       "id": 33
+    },
+    {
+      "date": "",
+      "time": "",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 34
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 35
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 36
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 37
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 38
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 39
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 40
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 41
+    },
+    {
+      "date": "",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 42
+    },
+    {
+      "date": "6/29/2022",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 43
     }
   ]
 }

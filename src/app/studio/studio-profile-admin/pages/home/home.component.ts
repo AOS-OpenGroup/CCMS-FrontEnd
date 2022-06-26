@@ -66,43 +66,14 @@ export class UpcomingComponent implements OnInit {
     this.guardianForm.resetForm();
   }
 
-  deleteItem(id: number) {
-    this.guardiansService.delete(id).subscribe(() => {
-      this.dataSource.data = this.dataSource.data.filter((o: Booking) => {
-        return o.id !== id ? o : false;
-      });
-    });
-    console.log(this.dataSource.data);
-  }
 
-  addGuardian() {
-    this.bookingData.id = 0;
-    this.guardiansService.create(this.bookingData).subscribe((response: any) => {
-      this.dataSource.data.push({...response});
-      this.dataSource.data = this.dataSource.data.map((o: any) => { return o; });
-    });
-  }
-
-  updateGuardian() {
-    this.guardiansService.update(this.bookingData.id, this.bookingData).subscribe((response: any) => {
-      this.dataSource.data = this.dataSource.data.map((o: Booking) => {
-        if (o.id == response.id) {
-          o = response;
-        }
-        return o;
-      });
-    });
-
-  }
   onSubmit() {
     if (this.guardianForm.form.valid) {
       console.log('valid');
       if (this.isEditMode) {
         console.log('about to update');
-        this.updateGuardian();
       } else {
         console.log('about to create');
-        this.addGuardian();
       }
       this.cancelEdit();
     } else {

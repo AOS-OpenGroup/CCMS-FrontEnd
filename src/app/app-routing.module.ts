@@ -15,6 +15,7 @@ import {BookingsStudioProfileComponent } from './studio/studio_profile/pages/boo
 import {UpcomingComponent } from './studio/studio-profile-admin/pages/home/home.component';
 import{BookingListComponent} from "./studio/studio-profile-admin/pages/booking-list/booking-list.component";
 import {BookTheStudioComponent} from "./studio/studio_profile/pages/book-the-studio/book-the-studio.component";
+import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.component';
 //import {PaymentComponent} from "./studio/studio_profile/pages/payment/payment.component";
 
 const routes: Routes = [
@@ -36,7 +37,7 @@ const routes: Routes = [
   {path: "studio-profile/:studioId/overview",
   component: OverviewComponent},
   {path: 'studio-profile/book-the-studio',component:BookTheStudioComponent},
-  // {path: 'studio-profile/book-the-studio/payment',component:PaymentComponent}
+   {path: 'studio-profile/book-the-studio/payment',component:PaymentComponent}
 
 ];
 

@@ -47,14 +47,9 @@ export class BookingListComponent implements OnInit {
   columns = [
 
     {
-      columnDef: 'Id',
-      header: 'No.',
-      cell: (element: Booking) => `${element.id}`,
-    },
-    {
       columnDef: 'customer',
       header: 'Customer',
-      cell: (element: Booking) => `${element.customer}`,
+      cell: (element: Booking) => `${element.musicianId}`,
     },
     {
       columnDef: 'date',
@@ -66,11 +61,11 @@ export class BookingListComponent implements OnInit {
       header: 'Time',
       cell: (element: Booking) => `${element.time}`,
     },
-    {
-      columnDef: 'status',
-      header: 'Status',
-      cell: (element: Booking) => `${element.status}`,
-    }
+    // {
+    //   columnDef: 'status',
+    //   header: 'Status',
+    //   cell: (element: Booking) => `${element.status}`,
+    // }
   ];
   displayedColumns = this.columns.map(c => c.columnDef);
 

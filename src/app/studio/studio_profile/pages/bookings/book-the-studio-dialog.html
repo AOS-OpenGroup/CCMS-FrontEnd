@@ -1,10 +1,11 @@
 <h2 mat-dialog-title>Book this studio</h2>
+<form action="onSubmit()">
 <mat-dialog-content class="mat-typography">
 <div class="w-5 text-center m-0 m-auto">
   <div>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Choose a date</mat-label>
-    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
+    <input [(ngModel)]="example" required matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" name="example">
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matSuffix [for]="picker">
       <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
@@ -15,9 +16,9 @@
 <div>
   <mat-form-field appearance="fill">
     <mat-label>Select the time</mat-label>
-    <mat-select>
-      <mat-option value="08:00">08:00 AM</mat-option>
-      <mat-option value="10:00">10:00 AM</mat-option>
+    <mat-select required>
+      <mat-option (click)="getSelectedDropdown('08:00')" value="08:00">08:00 AM</mat-option>
+      <mat-option (click)="getSelectedDropdown('08:00')" value="10:00">10:00 AM</mat-option>
       <mat-option value="12:00">12:00 PM</mat-option>
       <mat-option value="2:00">2:00 PM</mat-option>
       <mat-option value="4:00">4:00 PM</mat-option>
@@ -26,19 +27,12 @@
   </mat-form-field>
 </div>
 </div>
-
-
-  <h3>Speed &amp; Performance</h3>
-  <p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web
-    Workers and server-side rendering. Angular puts you in control over scalability.</p>
-
+  <h3>Notice:</h3>
+  <p>When submitted, you will be redirected to the Payment Section.</p>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="sayHi() ">Book and Go to Pay</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onSubmit()">Book and Pay</button>
 </mat-dialog-actions>
+</form>
 
-
-<!-- Copyright 2022 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at https://angular.io/license -->
