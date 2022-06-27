@@ -1,6 +1,6 @@
 .footer-content {
   bottom: 0px;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 60px;
   background-color: #3f51b5;

@@ -37,10 +37,17 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import 'primeflex/primeflex.scss';
-import { BookingsStudioProfileComponent } from './studio/studio_profile/pages/bookings/bookings-studio-profile.component';
+import { BookingsStudioProfileComponent, BookTheStudioDialog } from './studio/studio_profile/pages/bookings/bookings-studio-profile.component';
 import {UpcomingComponent} from "./studio/studio-profile-admin/pages/home/home.component";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { BookingListComponent } from './studio/studio-profile-admin/pages/booking-list/booking-list.component';
+import { StudioCardComponent } from './bookings/pages/main/studio-card/studio-card.component';
+import { BookTheStudioComponent } from './studio/studio_profile/pages/book-the-studio/book-the-studio.component'
+//import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.component';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
+import { MatDialogModule} from '@angular/material/dialog';
+import { PaymentComponent } from './studio/studio_profile/pages/payment/payment.component';
 
 
 @NgModule({
@@ -62,7 +69,11 @@ import { BookingListComponent } from './studio/studio-profile-admin/pages/bookin
     MainComponent,
     BookingsStudioProfileComponent,
     UpcomingComponent,
-    BookingListComponent ],
+    StudioCardComponent,
+    BookingListComponent,
+    BookTheStudioComponent,
+  BookTheStudioDialog,
+  PaymentComponent ],
   imports: [
     MatProgressSpinnerModule,
     MatPaginatorModule,
@@ -89,7 +100,10 @@ import { BookingListComponent } from './studio/studio-profile-admin/pages/bookin
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 export interface Studio {
   id: number;
-  title: string;
+  name: string;
+  address: string;
   description: string;
-  distance: string;
   img:string;
 }

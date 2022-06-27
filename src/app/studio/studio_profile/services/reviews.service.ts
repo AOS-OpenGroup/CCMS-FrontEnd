@@ -54,20 +54,14 @@ export class ReviewsService {
       );
   }
 
-  update(id: any, item: any): Observable<Review> {
-    return this.http.put<Review>(`${this.basePath}/${id}`, JSON.stringify(item),this.httpOptions)
+    // Get Reviews by studio id
+  getByStudioId(studioId: any): Observable<Review> {
+    return this.http.get<Review>(`${this.basePath}?studioId=${studioId}`, this.httpOptions)
       .pipe(
         retry(2),
-        catchError(this.handleError)
+          catchError(this.handleError)
       );
   }
 
-  // Delete Review
-  delete(id: any): Observable<Review> {
-    return this.http.delete<Review>(`${this.basePath}/${id}`, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
-  }
+
 }

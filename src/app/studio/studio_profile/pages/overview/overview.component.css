@@ -7,3 +7,8 @@
 .image {
   padding: 10px;
 }
+img{
+  height: 45vh;
+  object-fit: cover;
+  object-position: center;
+}
