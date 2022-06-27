@@ -1,0 +1,26 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button [routerLink]="'/home'" mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button [routerLink]="'/bookings'" mat-menu-item>
+        <mat-icon>calendar_today</mat-icon>
+        <span>Bookings</span>
+      </button>
+      <button [routerLink]="'/'" mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+    <span>CCMS</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="'/profile'">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+</mat-sidenav-container>

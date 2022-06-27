@@ -1,0 +1,68 @@
+<app-menu></app-menu>
+  <a mat-button [routerLink]="['/studio-profile', studio.id, 'overview']">Overview</a>
+  <a mat-button [routerLink]="'/studio-profile/gallery'">Gallery</a>
+  <a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+  <a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+  <a mat-button [routerLink]="'/studio-profile/equipment'">Equipment</a>
+
+  <mat-divider [vertical]="true" [inset]="true"></mat-divider>
+  <mat-card class="example-card">
+    <img mat-card-image src={{studio.img}} alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <mat-card-title>{{studio.name}}</mat-card-title>
+      <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+      <p>
+        {{studio.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <ng-content></ng-content>
+
+    <div class="
+    reviews-section
+    text-left
+    bg-white
+    flex flex-column
+    p-6
+    m-3
+    border-round
+  ">
+    <h1 class="font-semibold text-4xl text-center mb-6">Reviews</h1>
+    <div>
+      <span class="font-semibold text-2xl p-3"> 4.5 </span>
+      <span class="px-2">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="pi-star-fill px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="pi-star-fill px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="pi-star-fill px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="pi-star-fill px-2" style="font-size: 2rem">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="pi-star-fill px-2" style="font-size: 2rem">star</mat-icon>
+      </span>
+    </div>
+
+    <div class="flex flex-column">
+      <ul style="list-style: none">
+        <li *ngFor="let review of reviewsData; let i=index">
+          <div class="grid box-review p-5">
+            <div class="col flex flex-column justify-content-center m-2">
+             <p class="font-semibold p-2">Score : {{ review.score }}</p> 
+              <span clas="p-2"
+                ><i class="pi pi-car p-2"></i>{{ review.musicianId }}</span>
+            </div>
+            <div class="col">
+              <div class="grid align-items-center p-2">
+                <span class=" pl-6" style="font-size: 1rem">
+                  {{ review.comment }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-column text-center w-full">
+      <input matInput type="number" placeholder="Your Score" required/>
+      <textarea  rows="5" cols="50" pInputTextarea autoResize="autoResize"></textarea>
+      <button class="mt-2" mat-raised-button click="addComment">Submit</button>
+    </div>
+  </div>
+<app-footer></app-footer>

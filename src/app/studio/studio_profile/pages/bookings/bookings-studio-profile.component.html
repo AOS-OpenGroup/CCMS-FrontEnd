@@ -1,0 +1,69 @@
+<app-menu></app-menu>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'overview']">Overview</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'gallery']">Gallery</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'equipment']">Equipment</a>
+
+<mat-divider [vertical]="true" [inset]="true"></mat-divider>
+<mat-card class="example-card">
+  <img mat-card-image src={{studio.img}} alt="Studio profile image" class="profile-img">
+  <mat-card-content>
+    <mat-card-title>{{studio.name}}</mat-card-title>
+    <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+    <p>
+      {{studio.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<ng-content></ng-content>
+    <div class="container p-6 m-3">
+        <h1 class="font-semibold text-4xl text-center mb-6">Bookings</h1>
+        <div class="AdressData">
+            <h3>The studio is located at {{studio.address}}. Remember it is open from 8:00 AM to 8:00 PM</h3>
+            <div class="m-0 m-auto text-center">
+            <button mat-raised-button color="primary" (click)="openDialog()">Book the studio</button>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="ContactUS m-3">
+            <h1 class="font-semibold text-center">Contact us</h1>
+            <h3>studio214@gmail.com</h3>
+            <h3>+51 983 564 324</h3>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="forms_conteiner">
+            <h1 class="font-semibold text-center">Send us a message</h1>
+            <div class="form">
+                <h3>Fill in the form and we will contact you</h3>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Name</mat-label>
+                      <input type="name" matInput [formControl]="emailFormControl" placeholder="Christian Joel">
+                      <mat-error *ngIf="emailFormControl.hasError('name') && !emailFormControl.hasError('required')">
+                        Please enter a name
+                      </mat-error>
+                      <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Name is <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </form>
+                  <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Email</mat-label>
+                      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Please enter a valid email address
+                      </mat-error>
+                      <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </form>
+                  <div class="text-center">
+                  <button mat-raised-button color="primary">Contact me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<app-footer></app-footer>

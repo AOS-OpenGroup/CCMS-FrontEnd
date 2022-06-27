@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="container-data">
+          <mat-card>
+            <img mat-card-image src="{{ studio.img }}" alt="car image">
+            <div class="car-information">
+              <mat-card-title>{{ studio.name }}</mat-card-title>
+              <div>{{ studio.description}}</div>
+              <mat-card-subtitle class="mt-2">{{ studio.address }}</mat-card-subtitle>
+              <mat-card-actions class="text-center">
+                <a  [routerLink]="['/studio-profile', studio.id, 'overview']"><button mat-stroked-button>See more</button></a>
+              </mat-card-actions>
+            </div>
+          </mat-card>
+    </div>
+  </div>
+
+<!--/studio-profile/{{studio.id}}overview"-->

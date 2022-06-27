@@ -1,0 +1,9 @@
+<app-menu></app-menu>
+<div class="trending-container">
+  <div class="recently-cards">
+  <app-studio-card
+    *ngFor="let studio of studiosData"
+    [studio]="studio"
+  ></app-studio-card>
+</div>
+</div>

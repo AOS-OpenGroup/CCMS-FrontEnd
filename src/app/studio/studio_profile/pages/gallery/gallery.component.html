@@ -1,0 +1,34 @@
+<app-menu></app-menu>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'overview']">Overview</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'gallery']">Gallery</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'equipment']">Equipment</a>
+
+<mat-divider [vertical]="true" [inset]="true"></mat-divider>
+<mat-card class="example-card">
+  <img mat-card-image src={{studio.img}} alt="Studio profile image" class="profile-img">
+  <mat-card-content>
+    <mat-card-title>{{studio.name}}</mat-card-title>
+    <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+    <p>
+      {{studio.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<ng-content></ng-content>
+
+<div class="p-6
+m-3">
+  <h1 class="font-semibold text-4xl text-center mb-6">Gallery</h1>
+  <mat-grid-list cols="4" rowHeight="330px" class="m-4">
+    <mat-grid-tile 
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+        <img class="gallery-img" src="{{tile.url}}" alt="img">
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,16 @@
+
+  .container-data {
+    border-radius: 10px;
+    background-color: #E1E5E8;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-gap: 40px;
+  }
+
+  .card {
+    max-width: 350px;
+  }
+  
+  
+  

@@ -1,0 +1,59 @@
+<app-menu></app-menu>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'overview']">Overview</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'gallery']">Gallery</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'equipment']">Equipment</a>
+
+<mat-divider [vertical]="true" [inset]="true"></mat-divider>
+<mat-card class="example-card">
+  <img mat-card-image src={{studio.img}} alt="Studio profile image" class="profile-img">
+  <mat-card-content>
+    <mat-card-title>{{studio.name}}</mat-card-title>
+    <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+    <p>
+      {{studio.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<ng-content></ng-content>
+  <div class="container p-6 m-3">
+    <h1 class="font-semibold text-4xl text-center mb-6">Equipment</h1>
+
+    <h2>Microphones</h2>
+    <div class="container__equipment">
+      
+      <div class="card_equipment">
+        <img src="https://www.monterreydelsur.com/888/microfono-core-300.jpg" alt="img">
+        <h3>Coles 4038</h3>
+      </div>
+      <div class="card_equipment">
+        <img src="https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img">
+        <h3>Microphone Rose</h3>
+      </div>
+      <div class="card_equipment">
+        <img src="https://images.pexels.com/photos/2918997/pexels-photo-2918997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img">
+        <h3>Condenser Microphone</h3>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <br>
+    <h2>DAW</h2>
+    <mat-divider></mat-divider>
+    <div class="container__equipment">
+      
+      <div class="card_equipment">
+        <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img">
+        <h3>White Beats</h3>
+      </div>
+      <div class="card_equipment">
+        <img src="https://images.pexels.com/photos/324672/pexels-photo-324672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img">
+        <h3>Marshall</h3>
+      </div>
+      <div class="card_equipment">
+        <img src="https://images.pexels.com/photos/744318/pexels-photo-744318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img">
+        <h3>Equalizer</h3>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>

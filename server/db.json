@@ -1,3 +1,160 @@
 {
-
+  "studios": [
+    {
+      "id": 1,
+      "name": "Studio 214 UPC",
+      "address": "Santiago de Surco",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/3413462/pexels-photo-3413462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 2,
+      "name": "Studio 456 USIL",
+      "address": "La Molina",
+      "description": "There's enough space for a large band to play together in the live room, and interchangeable acoustic panels for a variety of room sounds. ",
+      "img": "https://images.pexels.com/photos/2426085/pexels-photo-2426085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 3,
+      "name": "Studio 514 PUCP",
+      "address": "San Miguel",
+      "description": "Our studio is equipped with a Phillips Hue lighting system throughout. Clients can make the space their own.",
+      "img": "https://images.pexels.com/photos/1869322/pexels-photo-1869322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 4,
+      "name": "Studio 176 UDEP",
+      "address": "Miraflores",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/2426085/pexels-photo-2426085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 5,
+      "name": "Studio 321 UP",
+      "address": "San Isidro",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/1869322/pexels-photo-1869322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 6,
+      "name": "Studio 154 ESAN",
+      "address": "Monterrico",
+      "description": "The studio's extensive collection of synthesizers and drum machines are wall mounted, wired to the patch bay and linked via midi.",
+      "img": "https://images.pexels.com/photos/3413462/pexels-photo-3413462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ],
+  "musicians": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Juan Lopez",
+      "email": "juanlo@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Pedro Perez",
+      "email": "pedrope@gmail.com"
+    }
+  ],
+  "users": [
+    {
+      "email": "john.doe@gmail.com",
+      "password": "$2a$10$IVR5bLl85muR8yjxCcVndOWm1nUAp26UkNJvzRaomRlyg3ydBgrOi",
+      "id": 1
+    },
+    {
+      "email": "james@gmail.com",
+      "password": "$2a$10$gZc8GJQELT0BlCnfnhezCe1n8zDi1QIDzhv2HPEAkStZq/LM.sC8W",
+      "name": "james potter",
+      "role": "artist",
+      "id": 2
+    },
+    {
+      "email": "harry@gmail.com",
+      "password": "$2a$10$wQxN0h835YpKIgjx6a/3UOYMJ9Lnly6kb/zakqJNw2wKI0QfLJVC2",
+      "name": "harry potter",
+      "role": "artist",
+      "id": 3
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "musicianId": 1,
+      "studioId": 2,
+      "comment": "Although cosy and intimate, the studio is large enough to accommodate full album sessions. A generously-sized live room (big enough for small orchestral sessions) is complemented by a control room and three booth rooms for isolation.",
+      "score": 4.6
+    },
+    {
+      "id": 2,
+      "musicianId": 4,
+      "studioId": 2,
+      "comment": "Combined with top of the range monitoring (ATC), acoustics designed by the legendary Nick Whitaker, and a large, curated collection of vintage instruments and microphones, the studio is the perfect place for writing, tracking or mixing.",
+      "score": 4.7
+    },
+    {
+      "id": 3,
+      "musicianId": 3,
+      "studioId": 1,
+      "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
+      "score": 4.4
+    },
+    {
+      "id": 4,
+      "musicianId": 3,
+      "studioId": 1,
+      "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
+      "score": 4.9
+    },
+    {
+      "id": 5,
+      "musicianId": 3,
+      "studioId": 3,
+      "comment": "Baltic Studios is an exceptional recording studio located in the creative heart of East London. Since the studio's inception in 2012, Baltic has housed many now legendary albums from artists such as Bjork, Skepta, Arctic Monkeys, Thurston Moore, Paloma Faith, James Bay, Jessie Ware, Glass Animals, MIA and more.",
+      "score": 4.9
+    }
+  ],
+  "upcoming": [
+    {
+      "id": 1,
+      "customer": "james potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 0
+    },
+    {
+      "id": 2,
+      "customer": "luca potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 1
+    },
+    {
+      "id": 3,
+      "customer": "maria potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 0
+    },
+    {
+      "id": 4,
+      "customer": "losa potter",
+      "date": "Jun 7, 2022",
+      "time": "09:00",
+      "status": 1
+    }
+  ],
+  "bookings": [
+    {
+      "date": "6/29/2022",
+      "time": "08:00",
+      "studioId": 1,
+      "musicianId": 2,
+      "id": 1
+    }
+  ]
 }

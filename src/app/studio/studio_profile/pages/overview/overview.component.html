@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<a mat-button [routerLink]="'/studio-profile/overview'">Overview</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'gallery']">Gallery</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'reviews']">Reviews</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'bookings']">Bookings</a>
+<a mat-button [routerLink]="['/studio-profile', studio.id, 'equipment']">Equipment</a>
+
+<mat-divider [vertical]="true" [inset]="true"></mat-divider>
+<mat-card class="example-card">
+  <img mat-card-image src={{studio.img}} alt="Studio profile picture">
+  <mat-card-content>
+    <mat-card-title>{{studio.name}}</mat-card-title>
+    <mat-card-subtitle>{{studio.address}}</mat-card-subtitle>
+    <p>
+      {{studio.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<ng-content></ng-content>
+
+<mat-grid-list cols="1" rowHeight="200px">
+    <mat-grid-tile>
+      <h1 class="font-semibold text-4xl text-center mb-6"> Overview </h1>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img
+        src={{studio.img}}
+        alt=""
+        width="500 px"
+
+      />
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <p class="text-base">
+        {{studio.description}}
+      </p>
+    </mat-grid-tile>
+  </mat-grid-list>
+
